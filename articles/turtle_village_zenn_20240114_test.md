@@ -2,7 +2,7 @@
 title: "テストページを作成した"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [zenn]
+topics: [zenn,test,yaml]
 published: false
 ---
 ## 概要
