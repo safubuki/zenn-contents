@@ -15,4 +15,4 @@ published: false
 - テスト内容２
 - テスト内容３
 
-![turtle](/images/turtle-village-zenn-20240114-test/2024-01-14-20-30-14.png)
+![turtle](/images/turtle-20240114-test/2024-01-14-20-30-14.png)
