@@ -3,7 +3,7 @@ title: "VSCodeの魅力を引き出す超厳選ショートカットキーと拡
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [vscode,vscode拡張機能,ショートカット]
-published: false
+published: true
 ---
 VSCodeは大変人気の高いエディタですが、その魅力を十分に引き出している人は案外少ないのではないでしょうか？私はレビューなどで、自分が使っているショートカットや拡張機能を知らないという方に出会うことがよくあります。そして、その際に私の知っていることを共有するととても喜んでいただけます😊
 色々な方のVSCodeの魅力を引き出すことができれば、もっともっと幸せになる人が増えるのではという思いで「VSCodeの魅力を引き出す超厳選ショートカットと拡張機能18選」を紹介します。
@@ -139,4 +139,4 @@ Gitは、開発を行う上で欠かせないツールで、私も会社や個�
 
 使ってみたい思うショートカットキーや拡張機能はありましたか？いきなり全てを使いこなすのは難しいと思いますので、ショートカットキーは少しずつ、拡張機能も一つ一つ機能を確認しながら使ってみるのが良いと思います👍
 ここで紹介したものは、本当にごく一部でこれ以外にも便利なショートカットキーや拡張機能はたくさんあります。検索エンジンで[「VSCode ショートカットキー (Bingで検索)」](https://www.bing.com/search?q=VSCode+%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEEUYOzIGCAYQRRg8MgYIBxBFGDwyBggIEEUYPNIBCTIxMzk3ajBqNKgCALACAA&FORM=ANAB01&PC=U531) や [「VSCode おすすめ 拡張機能 (Bingで検索)」](https://www.bing.com/search?q=VSCode+%E3%81%8A%E3%81%99%E3%81%99%E3%82%81+%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=vscode+%E3%81%8A%E3%81%99%E3%81%99%E3%82%81+%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD&sc=11-16&sk=&cvid=EA17F0973B9D49AD90E42800EE7C05A1&ghsh=0&ghacc=0&ghpl=) と検索すると素晴らしいブログ記事がいくつもヒットしますので、さらに世界を広げてみたいという方はぜひ見てみてください。
-これは便利というものが一つでもありましたら幸いです！長くなりましたが、最後までお付き合いくださり、ありがとうございました。
+これは便利そうというものが一つでもありましたら幸いです！長くなりましたが、最後までお付き合いくださり、ありがとうございました。
