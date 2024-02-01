@@ -1,9 +1,9 @@
 ---
-title: "【Stable Diffusion】WebUI拡張機能開発！作り方から公式Indexリスト登録まで"
+title: "【Stable Diffusion】WebUI拡張機能開発！作り方からIndexリスト登録まで"
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [StableDiffusion,AI]
-published: false
+topics: [StableDiffusion,AI,Python,GitHub]
+published: true
 ---
 画像生成AIは、掛け算の組み合わせ（例えば、亀×犬や花×亀など）から、想像もできないようなものを生み出し驚かされます。画像生成AIには様々なツールがありますが、今回は扱うStable Diffusion WebUI（以下、WebUI）は、自分のPCに環境を作ることができます。そして、他の人が作成した拡張機能を自由に組み合わせて、自分の好きなようにカスタマイズすることができます。
 
