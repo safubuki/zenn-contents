@@ -74,11 +74,11 @@ GitHubのURLを直接張り付ける方法の他に、このようなリスト�
 6. 自分の拡張機能のフォルダの中に移動し、**scriptsフォルダを作成**します。
 7. scriptsフォルダの中に移動し、**開発用のpyファイルを作成**します。
 ※ ファイル名は、main.pyやext_func.pyなど何でも構いません。
-8. 以下のGitHubに拡張機能のテンプレート（雛形）があります。
-アクセスして、READMEを確認してください。なお、ファイルはそれぞれ次の内容になっています。
-   - **template.py**：txt2imgやimg2imgタブの中に機能を作ります。
+8. 以下のGitHubに便利な拡張機能のテンプレート（雛形）が公開されています。
+こちらにアクセスして`scripts`フォルダを参照ください。ファイルはそれぞれ次の内容になっています。
+   - **template.py**：txt2imgやimg2imgタブの中に拡張機能を作ります。
    - **template_on_settings.py**：Settingsタブに設定を作ります。
-   - **template_on_tab.py**：txt2img等と同じようにタブに機能を作ります。
+   - **template_on_tab.py**：txt2img等と同じようにタブ上に拡張機能を作ります。
 
 https://github.com/udon-universe/stable-diffusion-webui-extension-templates
 
@@ -86,12 +86,14 @@ https://github.com/udon-universe/stable-diffusion-webui-extension-templates
 
 https://github.com/udon-universe/stable-diffusion-webui-extension-templates/blob/main/scripts/template_on_tab.py
 
-以上で、環境は整いました。
+10. 拡張機能のテンプレート（雛形）から以下のファイルを自身の環境にコピー
+
+以上で、実装をするための環境は整いました🎉
 
 ## 拡張機能の実装方法
 
 機能の実装を進める前に、拡張機能のUIについて説明します。
-今までの説明の中で、拡張機能の画面のいくつかお見せしてきましたが、こう思いませんでしたか？「もっと華やかにしてみたいな」「ボタンの形、表現を変えみようかな」と。私はちょっと思いました。しかし、これは残念ながらできません。
+今までの説明の中で、拡張機能の画面のいくつかお見せしてきましたが、こう思いませんでしたか？「もっと華やかにしてみたいな」「ボタンの形、表現を変えみようかな」と。私はちょっと思いました。しかし、これはできないようです。
 
 理由は、**Gradio**というフレームワークを使っているからです。
 このGradioは、Webアプリケーションを簡単に作ることができるPythonのライブラリです。関数と入出力の形式を指定するだけで、インタラクティブ（双方向）なUIを作成できる大変優れものです。ただ、それゆえに表現できるUIはある程度固定されます。
@@ -104,12 +106,18 @@ https://www.gradio.app/docs/interface
 ただし、高機能な拡張機能は中身の実装を紐解くのが大変ですから、シンプルな機能のものを参照すると良いと思います。
 
 **それでは、実装の仕方を解説します。**
-解説は、私が作成した拡張機能の画面およびコードを参考に解説していきます。
+解説は、私が作成した拡張機能の画面およびコードで解説していきます。
 
+- **画面**
 ![lr_helper_all](/images/turtle-20240128-stable-ext/lr_helper_all.png)
 *図1：Latent Regional Helper 全体（著者作成の拡張機能）*
 
-[ソースコードへのリンク（latent_regional_helper.py)](https://github.com/safubuki/sd-webui-latent-regional-helper/blob/main/scripts/latent_regional_helper.py)
+- **ソースコード**
+:::message
+以下のリンク先のコードを元に説明しますので、ご確認お願いします。
+:::
+**[safubuki/sd-webui-latent-regional-helper/blob/main/scripts/latent_regional_helper.py](https://github.com/safubuki/sd-webui-latent-regional-helper/blob/main/scripts/latent_regional_helper.py)**
+
 
 ### インポート
 まず、必要なモジュールをインポートします。
@@ -128,7 +136,7 @@ Gradioを利用するために必要です。
 StableDiffusion WebUI(AUTOMATIC1111)が提供するインタフェースです。
 ここでは、uiを新しいタブに追加するために利用しています。
 extensionsフォルダと同階層のmodulesフォルダにコードあります。
-解説ページなどは無い(と思います)ので、コードから紐解く必要あります。
+解説ページなどは無い(と思います)ので、コードから紐解く必要があります。
 
 ### UI画面
 以下の関数が、UI表示を行っている箇所になります。
@@ -179,7 +187,7 @@ with gr.Blocks():
 
 #### コンポーネント
 
-コンポーネントは、`Textbox`や`Button`などのUI画面を構成する要素です。
+コンポーネントとは、`Textbox`や`Button`などのUI画面を構成する要素です。
 それぞれのコンポーネントの詳細な使い方は、割愛させていただければと思います。
 私のコードやGradioのページ、各種拡張機能の中身を見ることによって理解が進むと思います。
 なお、利用する上で押さえておくべきポイントを以下に記します。
@@ -198,6 +206,24 @@ with gr.Blocks():
   - **interactive**：
   　`TextBox`などTrueの時編集可能です。Falseは編集できません。
 - タイトルや項目名などちょっとした文字表示は`HTML`を使用します。
+
+::::message alert
+つまづきポイント！
+:::details テキストボックスにValue値を設定してもUI上で値が反映されない（クリックで表示）
+- 現象
+コード上でvalueを都度変更しても、UI表示に値が反映されない。
+- 原因
+デフォルト値を設定すると、stable-diffusion-webui/ui-config.jsonに値が反映される。以降、WebUIはui-config.jsonの値を参照して、デフォルト値をテキストボックスなどに反映するため、コード側のvalueを変更してもWebUIには反映されない。
+
+![uiconfig](/images/turtle-20240128-stable-ext/uiconfig.png =500x)
+*ui-config.json*
+
+- 解決
+  1. コードのデフォルト値を自身が希望する値に変更する。
+  2. ui-config.jsonから自身が開発している開発の設定を削除する。
+  3. WebUIを再起動する。
+:::
+::::
 
 ### ロジック処理
 
@@ -243,22 +269,102 @@ button_execute.click(
   fnで設定した関数からの戻り値を格納する先を設定します。
   各コンポーネント生成時に保存した変数を必要に応じて設定します。
 
-### つまずいたポイント・TIPS
+::::message alert
+つまづきポイント！
+:::details リスト形式でinputsに引数として渡すとエラーが発生した（クリックで表示）
+- 現象
+ドロップダウンリストの値をリストに設定してinputsに設定すると、AttributeErrorが発生した。
 
-:::message
-ここから書き始める！
+![listerror](/images/turtle-20240128-stable-ext/listerror.png =500x)
+*エラー発生時の実装*
+
+- 原因
+inputsにはgradioのブロック型の値を渡す必要があるが、リスト型で渡したためエラーが発生した。
+
+- 解決
+  1. リスト形式ではなく、一つ一つgradioのブロック型の値を引数として渡す
 :::
+::::
 
-:::message
-インスタンスなどの言葉が分かりにくくないか！確認。別にインスタンスのままでもいいけど。
+このようにしてキーが押された時の振る舞い決めています。
+
+以上で拡張機能の実装方法の説明は終了です。
+いかがでしたか？拡張機能の作成イメージはつかめましたでしょうか？
+準備で作成した開発用のpyファイルに自身でコードを書いて、動きを確かめてみてください。
+
+## 周辺ファイル
+
+ここでは、拡張機能のメイン処理以外に必要な以下の3つのファイルを解説します。
+自身の拡張機能フォルダの直下に次のファイルを用意してください。
+書き方は
+
+### LICENSE
+開発した拡張機能のOSSライセンス形態、内容を記載します。
+自身の拡張機能をOSSとして公開する予定が無ければ不要ですが、公開するのであればあった方が良いです。
+
+https://github.com/safubuki/sd-webui-latent-regional-helper/blob/main/LICENSE
+
+特にこだわりが無ければMITライセンスで良いと思いますが、OSSのライセンス形態各種ありますので、以下のページなどを参考にしてみてください。
+
+https://manumaruscript.com/oss-licences-comparison/
+
+### README.md
+拡張機能の使い方を記載します。
+こちらを記載してGitHubにプッシュすると、自身のGitHubレポジトリのトップページにREADME.mdの内容が自動的に表示されます。こちらはMarkdown記法を用いて作成します。Markdown記法については、以下のページを参照してみてください。
+
+https://qiita.com/tbpgr/items/989c6badefff69377da7
+
+また、Markdownの記述はVSCodeを使って編集すると、作成イメージを確認しながら作成できて便利です。
+
+![readme](/images/turtle-20240128-stable-ext/readme.png =600x)
+*readmeの作成*
+
+この作成イメージは、VSCode右上の虫眼鏡のマークがついたプレビューボタンを押すことで表示できます。
+
+![preview](/images/turtle-20240128-stable-ext/preview.png =300x)
+*プレビューボタン*
+
+### install.py
+拡張機能を動作させる際に必要なモジュールを記載します。
+もし、Python標準のモジュールだけで動作する拡張機能であれば、install.pyは不要です。しかし`pip`を使用して何らかモジュールをインストールしなければ動作しない拡張機能を作成する場合、install.pyのL5-L6にあるコメントを外して、必要な記述を行う必要があります。こうすることで拡張機能を起動するとき、自動で必要なモジュールがインストールされます。
+
+https://github.com/udon-universe/stable-diffusion-webui-extension-templates/blob/main/install.py
+
+- L5:既にモジュールがインストールされていないか確認します。
+- L6:動作に必要なモジュールがインストールされます。
+
+::::message
+ワンポイント！
+:::details install.pyが不要な場合、中身のコメントアウトではなく、ファイルを削除しよう！（クリックで表示）
+Python標準のモジュールだけで動作する拡張機能の場合、install.pyは不要です。
+ここで「コメントアウトしているから、ファイルは残しておいてもいいか」と思われるかもしれません。しかし、このファイルはコメントアウトして処理が無かったとしても、残しておくだけで拡張機能の起動時間に影響を与えます。
+
+![start_prof](/images/turtle-20240128-stable-ext/start_prof.png =400x)
+
+起動時間は、WebUI画面下部の`Startup profile`をクリックすると確認できます。
+  
+- **install.pyあり**（中身はコメントアウトして処理なし）
+  ![install_ari](/images/turtle-20240128-stable-ext/install_ari.png =500x)
+
+- **install.pyなし**
+  ![install_nashi](/images/turtle-20240128-stable-ext/install_nashi.png =500x)
+
+ありの場合、58ミリ秒かかっていることが分かります。最大で100ミリ秒の時もありました。非常に小さい値に感じるかもしれませんが、これが積み重なると意外と侮れない時間になります。
+
+実は私も最初はコメントアウトして残していましたが、StableDiffusion WebUI 拡張機能のPull Request時にレビューでアドバイスを受けて気づきました。
+
+**install.pyは不要ならファイルごと削除でOKです！**
 :::
+::::
 
-#### gradioのブロック型をリストに詰めてエラー発生
+大変長い道のりでしたが、お疲れさまでした！
+以上で実装の解説は終わりになります。
+ここまでの内容を読めば、私と同じように小さな拡張機能は作れるのではないでしょうか。
 
-#### SD拡張UIのテキストボックスにValue値設定しても反映されない
+「ここが分かりにくい」などありましたら、補足説明や解説を追加しますので、遠慮なくコメントいただければと思います。
 
-#### install.pyは、インストールするライブラリが無ければ、全く用意しなくてよい
-
+次の章では、WebUIのIndexリストへの登録方法を解説します。
+あともう少しですので、最後までお付き合いください。
 
 ## Indexリスト登録方法
 
@@ -271,6 +377,12 @@ udon
 公式
 
 公式のextention手順
+
+
+:::message
+インスタンスなどの言葉が分かりにくくないか！確認。別にインスタンスのままでもいいけど。
+:::
+
 
 ## まとめ
 
