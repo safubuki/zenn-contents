@@ -292,7 +292,7 @@ inputsにはgradioのブロック型の値を渡す必要があるが、リス�
 いかがでしたか？拡張機能の作成イメージはつかめましたでしょうか？
 準備で作成した開発用のpyファイルに自身でコードを書いて、動きを確かめてみてください。
 
-## 周辺ファイル
+## 周辺ファイル作成
 
 ここでは、拡張機能のメイン処理以外に必要な以下の3つのファイルを解説します。
 自身の拡張機能フォルダの直下に次のファイルを用意してください。
@@ -363,37 +363,85 @@ Python標準のモジュールだけで動作する拡張機能の場合、insta
 
 「ここが分かりにくい」などありましたら、補足説明や解説を追加しますので、遠慮なくコメントいただければと思います。
 
-次の章では、WebUIのIndexリストへの登録方法を解説します。
-あともう少しですので、最後までお付き合いください。
+それでは、あともう少し、最後までお付き合いください。
 
 ## Indexリスト登録方法
 
-ブログの内容（大きく項目を分ける）
+この章では、WebUIのIndexリストへの登録方法を解説します。
+冒頭でもお伝えしましたが、このようなリストに追加されることで、WebUIを使っている人の目に触れる機会が増えます。
+
+![index_list](/images/turtle-20240128-stable-ext/index_list.png =500x)
+
+それでは、手順を解説していきます。
+
+1. 以下のページにアクセスしてください。このページにある`Step by step instructions`の内容を分かりやすく説明します。
+   https://github.com/AUTOMATIC1111/stable-diffusion-webui-extensions
+2. リポジトリのForkという操作をして、stable-diffusion-webui-extensionsを自身のレポジトリに取り込んでください。画面右上にボタンがあります。
+   ![fork](/images/turtle-20240128-stable-ext/fork.png =400x)
+3. Forkしたレポジトリをクローンしてください。
+   ```
+   git clone https://github.com/{自身のGitHubアカウント名}/stable-diffusion-webui-extensions.git
+   ```
+4. 上記のレポジトリで作業ブランチを作成してください。
+5. 作業ブランチ上で拡張用のjsonを編集します。
+   - extension_template.jsonのコピーします。
+   - extensionsフォルダにペーストします。
+   - ファイル名を変更します。
+     - 自身の拡張の名前すると良いです。
+     私の場合はsd-webui-latent-regional-helper.jsonにしました。
+   - ファイルを編集します。
+     - このような感じです。
+       ```
+       {
+          "name": "Latent Regional Helper",
+          "url": "https://github.com/safubuki/sd-webui-latent-regional-helper.git",
+          "description": "Simplify the region division settings for Latent Couple and Regional Prompter. Simply select from the drop-down list to output the setting values.",
+          "tags": [
+              "script",
+              "tab"
+          ]
+       }
+       ```
+       :::message
+       added: "YYYY-MM-DD" という項目は自動で設定されるので、設定不要です。
+       :::
+       :::message
+       tagsに何を設定して良いか迷ったら、トップ階層のtags.jsonを参照ください。
+       :::
+6. 作業ブランチにコミットして、リモートブランチにプッシュします。
+7. プルリクエストを行います。
+descriptionに自身のギットのURLなど簡単な情報を記載して、Checlistにチェックを入れます。チェックはxで入れることができます。
+![pr](/images/turtle-20240128-stable-ext/pr.png =600x)
+8. プルリクエストが行えていることを確認して待ちます。
+タイミングにもよりますが、遅くとも1週間くらい待てば、レビューが実施され、特に問題が無ければマージしていただけます。
 
 ## 参考サイト
 
-udon
+拡張機能を作成するにあたり、以下のサイトには本当にお世話になりました。
+こちらのサイトも参考にしてみてください。
 
-公式
+ページでの分かりやすい解説はもちろん、GitHubに便利なテンプレートまで公開くださっており、本当に助けられました。
 
-公式のextention手順
+https://note.com/udon_universe/n/n5b90689104ce
 
+Stable Diffusion WebUI公式の拡張機能開発のページです。こちらも参考になる内容が多かったです。
 
-:::message
-インスタンスなどの言葉が分かりにくくないか！確認。別にインスタンスのままでもいいけど。
-:::
-
+https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Developing-extensions
 
 ## まとめ
 
-内容を振り返る
-今後に向けての紹介する
+以上で、全ての説明は終了となります！
+長い説明に、根気強くお付き合いくださりありがとうございました。
+これでStable Diffusion WebUI 拡張機能開発者の仲間入りです。
 
-:::message
-拡張機能について簡単に紹介する？
-:::
+私もまだまだ、拡張機能についてはできることが限られていますので、これからも少しずつ今の拡張機能をアップデートしながら理解を深めていきたいと思います。
 
-## リンク
+このページを読んでくださった方が、拡張機能を開発するきっかけや少しでも役立っていただけたならとても嬉しいです。
+改めまして、本当にありがとうございました。
+
+## おまけ
+
+WebUIの拡張機能ってこうやって作るんだ！自分も作ってみたい。でも、PythonやGitはちょっと・・という方のためにオススメのサイトを紹介します。どちらも有名なサイトなので、私が紹介するまでもないかもしれませんが、参考にしていただければと思います。
 
 Pythonの学習に最適です。入門から段階的に学べます。
 今回の私のプログラムであれば、基礎編＋応用の関数とかwith文で理解できるかと思います。
