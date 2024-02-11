@@ -235,3 +235,7 @@ https://play.google.com/store/apps/details?id=com.touchtype.swiftkey
 
 **iOS(iPhone)**
 https://apps.apple.com/jp/app/microsoft-swiftkey-ai-keyboard/id911813648
+
+## 更新履歴
+
+- **2024/02/11**：アプリのアップデートに合わせて、起動方法の画像を差し替えました。
