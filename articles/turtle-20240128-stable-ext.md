@@ -18,6 +18,7 @@ published: true
 - **自分で拡張機能を作ってみたい人**
   
 ただし、作成にあたって次のスキルが必要になります。
+
 - **WebUIの拡張機能を扱える**
 - **Pythonでプログラムを作成できる**
 - **GitHubを扱える**
@@ -67,7 +68,7 @@ GitHubのURLを直接張り付ける方法の他に、リストを参照して�
 2. 作成したGitHubレポジトリのアドレスをコピーします。
 3. StableDiffusion WebUIを開き、`Extensions`タブ→`Install from URL`タブに移動します。
 4. 先ほどコピーしたアドレスを赤枠の欄に張り付けて、Installします。
-   
+
    ![stable](/images/turtle-20240128-stable-ext/stable.png =400x)
 
 5. `extensions`フォルダの下に、自分の拡張機能のフォルダ(＝GitHubレポジトリ名)ができていることを確認します。
@@ -112,13 +113,20 @@ https://www.gradio.app/docs/interface
 *Latent Regional Helper 全体（著者作成の拡張機能）*
 
 - **ソースコード**
-:::message
-以下のリンク先のコードを元に説明しますので、リンク先にアクセスしてください。
-:::
-**[safubuki/sd-webui-latent-regional-helper/blob/main/scripts/latent_regional_helper.py](https://github.com/safubuki/sd-webui-latent-regional-helper/blob/main/scripts/latent_regional_helper.py)**
 
+:::message
+以下のリンク先のコードを元に説明しますので、リンク先にアクセスしてください。  
+:::
+:::message
+2024/02/13 追記
+拡張機能の最新のコードはアップデートしております。
+この章の説明は、本記事公開時点（2024/02/02）のコードを元に行いますので、
+以下のリンク先へのアクセスをお願いします。
+:::
+**[safubuki/sd-webui-latent-regional-helper/blob/a6d2b18d19a70ebe8f958305e4fc11c71e6f3e7d/scripts/latent_regional_helper.py](https://github.com/safubuki/sd-webui-latent-regional-helper/blob/a6d2b18d19a70ebe8f958305e4fc11c71e6f3e7d/scripts/latent_regional_helper.py)**
 
 ### インポート
+
 まず、必要なモジュールをインポートします。
 
 ```Python:latent_regional_helper.py
@@ -126,6 +134,7 @@ from typing import List, Tuple
 import gradio as gr
 from modules import script_callbacks
 ```
+
 - **typing**
 Pythonの型ヒントのために使用します。拡張機能に直接関係はありません。
 - **gradio**
@@ -137,13 +146,18 @@ extensionsフォルダと同階層の`modules`フォルダにコードありま�
 ドキュメントなどは無い(と思います)ので、コードから紐解く必要があります。
 
 ### UI画面
+
 次の関数が、UI画面を作っている箇所になります。
+
 ```Python:latent_regional_helper.py
 def on_ui_tabs() -> List[Tuple[gr.Blocks, str, str]]:
 ```
+
 #### レイアウト
+
 on_ui_tabsの中を見ていくと`Blocks` `Row` `Column`が目に付くと思います。
 それぞれ説明します。
+
 - **Blocks**
   gradio のインターフェイスを利用するために必要な要素です。まずこれで全体を囲います。
 - **Row**
@@ -152,6 +166,7 @@ on_ui_tabsの中を見ていくと`Blocks` `Row` `Column`が目に付くと思�
   子要素を垂直方向に並べます。
 
 コードから`Blocks` `Row` `Column`の部分だけを抜き出し、分かりやすくして見ていきます。
+
 ```Python
 with gr.Blocks():
     with gr.Row():
@@ -170,6 +185,7 @@ with gr.Blocks():
         with gr.Column():
             pass
 ```
+
 - `Blocks`で全体を囲み、その後`Row`を使用して、2つの`Column`を水平方向に並べます。
 - 左側の`Column`では、垂直方向に要素を並べますが、途中で`Row`が出現します。
   このとき、`Column`の中で、`Row`によりテキストボックスやチェックボックスを水平方向に並べます。
@@ -188,12 +204,14 @@ with gr.Blocks():
 UI画面を作るときに、`Textbox`や`Button`などの部品をコンポーネントと呼びます。 コンポーネントの使い方は、ここでは詳しく説明しませんが、私のコードやGradioのページ、各種拡張機能の中身を見ていただければ、理解できると思います。 なお、コンポーネントを利用する上で押さえておくべきポイントを以下に記します。
 
 - コンポーネントを生成したときの戻り値はキーイベント等で利用しますので、変数に保存しておいてください。以下のケースでは`textbox_back_weight`に保存しています。
+
   ```Python:latent_regional_helper.py
    textbox_back_weight: gr.Textbox = gr.Textbox(
       label='Background Weight (Latent Only)',
       interactive=True,
       value=str(default_back_weight))
   ```
+
 - 各種コンポーネント生成時の引数で使われる代表的なものは次の通りです。
   - **label**：
   　テキストボックスやボタンなどで表示する名前を設定します。
@@ -206,6 +224,7 @@ UI画面を作るときに、`Textbox`や`Button`などの部品をコンポー�
 ::::message alert
 つまづきポイント！
 :::details テキストボックスにValue値を設定してもUI表示で値が反映されない（クリックで表示）
+
 - 現象
 コード上でvalueを都度変更しても、UI表示に値が反映されない。
 - 原因
@@ -225,6 +244,7 @@ UI画面を作るときに、`Textbox`や`Button`などの部品をコンポー�
 
 個々のロジック処理について詳細な説明はしませんが、計算などを行う個所は別の関数やファイルなどを設けて、処理をするのが良いかと思います。
 私のコードでは、以下の関数が、キーイベントからの受け口となり、ロジック処理部が実行されています。
+
 ```Python:latent_regional_helper.py
 def division_output(radio_sel: str, col_num_1: str, col_num_2: str, col_num_3: str, col_num_4: str,
                     col_num_5: str, div_weight: str, back_weight: str,
@@ -234,11 +254,14 @@ def division_output(radio_sel: str, col_num_1: str, col_num_2: str, col_num_3: s
 ### キーイベント
 
 キーイベントは、以下の`Button`コンポーネント生成時`button_execute`に保存した戻り値を利用します。
+
 ```Python:latent_regional_helper.py
 # Run button
 button_execute: gr.Button = gr.Button(value='execute', variant='primary')
 ```
+
 `execute`キーが押された時のイベント処理は次の箇所になります。
+
 ```Python:latent_regional_helper.py
 button_execute.click(
     # Function to be executed when button_execute is clicked
@@ -254,7 +277,9 @@ button_execute.click(
     # Return values of the division_output function
     outputs=[textbox_division, textbox_position, textbox_weight])
 ```
+
 キーイベント(=click)実行時に指定するパラメータについて説明します。
+
 - **fn**
 　クリック時に実行される関数名を設定します。
 　ここでは、ロジック処理部の`division_output`を指定しています。
@@ -268,6 +293,7 @@ button_execute.click(
 ::::message alert
 つまづきポイント！
 :::details gradioブロック型のリスト形式でinputsに引数を渡すとAttributeErrorが発生した（クリックで表示）
+
 - 現象
 ドロップダウンリストの値をリストに設定してinputsに設定すると、AttributeErrorが発生した。
 
@@ -295,6 +321,7 @@ inputsにはgradioのブロック型の値を渡す必要があるが、リス�
 自身の拡張機能フォルダの直下に次のファイルを用意してください。
 
 ### LICENSE
+
 開発した拡張機能のOSSライセンス形態、内容を記載します。
 自身の拡張機能をOSSとして公開する予定が無ければ不要ですが、公開するのであればあった方が良いです。
 
@@ -305,6 +332,7 @@ https://github.com/safubuki/sd-webui-latent-regional-helper/blob/main/LICENSE
 https://manumaruscript.com/oss-licences-comparison/
 
 ### README.md
+
 拡張機能の使い方を記載します。
 こちらを記載してGitHubにプッシュすると、自身のGitHubレポジトリのトップページにREADME.mdの内容が自動的に表示されます。こちらはMarkdown記法を用いて作成します。Markdown記法については、以下のページを参照してみてください。
 
@@ -321,6 +349,7 @@ https://qiita.com/tbpgr/items/989c6badefff69377da7
 *プレビューボタン*
 
 ### install.py
+
 拡張機能を動作させる際に必要なモジュールを記載します。
 もし、Python標準のモジュールだけで使える拡張機能であれば、install.pyは不要です。しかし`pip`でモジュールをインストールしなければ使えない拡張機能の場合、install.pyのL5-L6にあるコメントを外して、インストールするモジュールの名前を記載する必要があります。そうすれば、拡張機能を開くときに、自動で必要なモジュールがインストールされます。
 
@@ -376,9 +405,11 @@ install.pyありの場合、58ミリ秒かかっていることが分かりま�
    ![fork](/images/turtle-20240128-stable-ext/fork.png =400x)
    *フォークボタン*
 3. 自身のGitHubページに移動し、Forkしたレポジトリをクローンしてください。
-   ```
+
+   ```text
    git clone https://github.com/{自身のGitHubアカウント名}/stable-diffusion-webui-extensions.git
    ```
+
 4. 上記のレポジトリに作業ブランチを作成してください。
 5. 作業ブランチ上で拡張用のjsonを編集します。
    - extension_template.jsonのコピーします。
@@ -388,7 +419,8 @@ install.pyありの場合、58ミリ秒かかっていることが分かりま�
      私の場合は`sd-webui-latent-regional-helper.json`にしました。
    - ファイルを編集します。
      - このような形で作成します。
-       ```
+
+       ```json
        {
           "name": "Latent Regional Helper",
           "url": "https://github.com/safubuki/sd-webui-latent-regional-helper.git",
@@ -399,6 +431,7 @@ install.pyありの場合、58ミリ秒かかっていることが分かりま�
           ]
        }
        ```
+
        :::message
        added: "YYYY-MM-DD" という項目は自動で設定されるので、設定不要です。
        :::
@@ -448,3 +481,9 @@ https://www.python-izm.com/
 
 私もGitの基本はこのサイトで学びました。
 https://backlog.com/ja/git-tutorial/
+
+## 更新履歴
+
+- **2024/02/14**
+  - 「拡張機能の実装方法」で参照するコードを、本記事公開時点（2024/02/02）のものに差し替えました。また、その旨をお伝えする記述を追加しました。
+  ※拡張機能がアップデートしても、説明に影響を与えないようにするためです。
