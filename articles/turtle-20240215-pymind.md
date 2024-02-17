@@ -3,7 +3,7 @@ title: "【Python】VSCode拡張機能で自信をもってコーディングす
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [python,vscode,vscode拡張機能,pylint,pylance,mypy,yapf,isort]
-published: false
+published: true
 ---
 プログラミングで、自分の書いたコードに自信が持てないことってありませんか？
 他人にコードを見せることが恥ずかしくて嫌だという経験、あるのではないでしょうか。
