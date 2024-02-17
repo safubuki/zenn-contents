@@ -84,6 +84,10 @@ AIを活用したコード作成の支援では、昨今話題の「GitHub Copil
 |     ![e](/images/turtle-20240121-vscode/e_pilot.png)<br>GitHub Copilot     | **AIがコードを記述する際に学習データに基づいて自動的にコードを提案、表示します。**<br>進化に驚かされます！一度体験をお勧めします。<br>※利用には費用がかかります | ![l](/images/turtle-20240121-vscode/ee_pilot.gif)     |
 | ![e](/images/turtle-20240121-vscode/e_pilot.png)<br>GitHub Copilot<br>Chat | **AIとチャットで対話しながらコードに対して質問、要求、実装できます。**<br>提案内容をVSCode上で即反映できるのが嬉しいです。<br>※利用には費用がかかります         | ![l](/images/turtle-20240121-vscode/ee_pilotchat.gif) |
 
+こちらで紹介した`Pylint` `Pylance` `Mypy` `yapf` `isort`について、私の記事で詳細な使い方をまとめていますので、もし良かったら見てみてください。
+
+https://zenn.dev/safubuki/articles/turtle-20240215-pymind
+
 ### ドキュメンテーション
 
 開発は、動作するコードを作成するだけではありません。誰が見ても分かりやすいようにコードにコメントを書き、全体像を把握しやすくするためにドキュメントを作成することはとても大切です。コメントとドキュメントは、コードの意図や仕様を明確にし、バグの発生や修正を防ぐ効果があります。また、他の開発者とのコミュニケーションや共同作業を円滑にする効果もあります。VSCodeの拡張機能を使うと、コードのコメント入力やドキュメント作成を楽に行うことができ、シーケンス図などの図の作成を行うこともできるようになります。
@@ -140,3 +144,8 @@ Gitは、開発を行う上で欠かせないツールで、私も会社や個�
 使ってみたい思うショートカットキーや拡張機能はありましたか？いきなり全てを使いこなすのは難しいと思いますので、ショートカットキーは少しずつ、拡張機能も一つ一つ機能を確認しながら使ってみるのが良いと思います👍
 ここで紹介したものは、本当にごく一部でこれ以外にも便利なショートカットキーや拡張機能はたくさんあります。検索エンジンで[「VSCode ショートカットキー (Bingで検索)」](https://www.bing.com/search?q=VSCode+%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%AD%E3%83%BC&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEEUYOzIGCAYQRRg8MgYIBxBFGDwyBggIEEUYPNIBCTIxMzk3ajBqNKgCALACAA&FORM=ANAB01&PC=U531) や [「VSCode おすすめ 拡張機能 (Bingで検索)」](https://www.bing.com/search?q=VSCode+%E3%81%8A%E3%81%99%E3%81%99%E3%82%81+%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=vscode+%E3%81%8A%E3%81%99%E3%81%99%E3%82%81+%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD&sc=11-16&sk=&cvid=EA17F0973B9D49AD90E42800EE7C05A1&ghsh=0&ghacc=0&ghpl=) と検索すると素晴らしいブログ記事がいくつもヒットしますので、さらに世界を広げてみたいという方はぜひ見てみてください。
 これは便利そうというものが一つでもありましたら幸いです！長くなりましたが、最後までお付き合いくださり、ありがとうございました。
+
+## 更新履歴
+
+- **2024/02/17**
+  プログラミング言語とAI支援の章に、紹介した拡張機能の詳細な使い方をまとめた記事のリンクを追加しました。
