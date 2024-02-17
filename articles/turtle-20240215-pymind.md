@@ -2,7 +2,7 @@
 title: "【Python】VSCode拡張機能で自信をもってコーディングする方法！"
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [python,vscode,vscode拡張機能]
+topics: [python,vscode,vscode拡張機能,pylint,pylance,mypy,yapf,isort]
 published: false
 ---
 プログラミングで、自分の書いたコードに自信が持てないことってありませんか？
