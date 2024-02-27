@@ -18,7 +18,7 @@ TODO コードを最適化している写真や、生成している写真をパ
 TODO タイトルを見直す
 実践的テクニックはあまりないので、お勧めの使い方に項目変更
 むしろ初心者目線でかみ砕いて分かりやすく説明している。「使い方」入れる
-OSS開発は外す、
+OSS開発は外す、横文字、略称は置き換える
 :::
 
 GitHub Copilotのおかげで、私は個人のOSS開発にもチャレンジすることができました。コーディングスキルが向上しただけでなく、開発の効率や品質も高まりました。そして、何より、**楽しくコーディングでき、モノづくりに集中することができる**ようになりました！
@@ -38,6 +38,10 @@ GitHub Copilotのおかげで、私は個人のOSS開発にもチャレンジす
 #### 得られる効果
 
 このブログを読むことで、次のような効果が得られます。
+
+:::message
+TODO 対象者も見直す、テクニックを得るわけではない。
+:::
 
 - GitHub Copilotの基本機能を理解し、AIコーディングができるようになります。
 - GitHub Copilotの応用、実践的なテクニックを得ることができます。
@@ -345,7 +349,7 @@ GitHub Copilotでは、以下のショートカットキーを使うことがで
 
 ### スラッシュコマンド
 
-GitHub Copilotには、目的の機能を簡単に呼び出し、素早く実行するために**スラッシュコマンド**があります。チャット欄で`/fix` や `/doc` などと入力すると、コード修正をしたり、クラスやメソッドの説明コメントを追加したりすることができます。本章では、コマンドの一覧を示し、よく使うものについてはさらに詳細な使い方を説明を行います。
+GitHub Copilotには、目的の機能を簡単に呼び出し、素早く実行するために**スラッシュコマンド**があります。チャット欄に`/fix` や `/doc` などを入力するだけで、コード修正をしたり、クラスやメソッドの説明コメントを追加したりすることができます。本章では、コマンドの一覧を示し、よく使うものについてはさらに詳細な使い方を説明を行います。
 
 #### コマンド一覧
 
@@ -371,28 +375,28 @@ GitHub Copilotには、目的の機能を簡単に呼び出し、素早く実行
 
 ##### /fix
 
-![slash_fix](/images/turtle-20240223-gitcopilot/slash_fix.png =500x)
-*オススメの観光地は教えてくれない*
+![slash_fix](/images/turtle-20240223-gitcopilot/slash_fix.gif =500x)
+*/fixコマンドによるコード修正提案*
 
 ##### /doc
 
-![slash_doc](/images/turtle-20240223-gitcopilot/slash_doc.png)
-*オススメの観光地は教えてくれない*
+![slash_doc](/images/turtle-20240223-gitcopilot/slash_doc.gif =500x)
+*/docコマンドによるコメント追加 英語・日本語*
 
 ##### /tests
 
-![slash_tests](/images/turtle-20240223-gitcopilot/slash_tests.png)
-*オススメの観光地は教えてくれない*
+![slash_tests](/images/turtle-20240223-gitcopilot/slash_tests.gif =500x)
+*/testsコマンドによるテストコード作成*
 
 ##### /explain
 
-![slash_explain](/images/turtle-20240223-gitcopilot/slash_explain.png)
-*オススメの観光地は教えてくれない*
+![slash_explain](/images/turtle-20240223-gitcopilot/slash_explain.gif)
+*/explainコマンドによる関数の説明*
 
 ##### /new
 
-![slash_new](/images/turtle-20240223-gitcopilot/slash_new.png)
-*オススメの観光地は教えてくれない*
+![slash_new](/images/turtle-20240223-gitcopilot/slash_new.gif)
+*/newコマンドによるファイル、コード作成*
 
 ## オススメの使い方
 
