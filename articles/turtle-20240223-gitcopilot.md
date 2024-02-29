@@ -455,7 +455,9 @@ GitHub Copilotとこれらの従来の開発支援ツールを組み合わせる
 
 
 
-
+:::message
+TODO 以下の不要な文章は削除
+:::
 
 
 
@@ -484,27 +486,9 @@ copilotで修正も。python記事参照
 
 自身のブログへのリンク
 
-## 気をつけるポイント
-
-### 古いAPI、機能しないコードが生成されることも
-
-古いバージョンのAPIを利用した、
-コードサンプルが生成されるケースがある
-	こんな感じの
-エラー出る
-		PyPDF2.errors.DeprecationErrorreader.numPages is deprecated and was removed in PyPDF2 3.0.0. Use len(reader.pages) instead.
-あまり一般的でない、普及していないフレームワークだと、サジェストが微妙なケースがある
-	Stable diffusionの拡張開発で利用する
-gradioでは、うまく機能しないコードが
-表示された
-
-
-### コパイロット（副操縦士）であるということ
-
-万能でなんでも作ってくれるものではない
-
-ペアプログラミング
-
 
 ## まとめ
 
+:::message
+TODO 注意点はまとめの中で触れる程度にとどめる
+:::
