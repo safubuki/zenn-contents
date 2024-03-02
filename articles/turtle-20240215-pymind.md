@@ -385,10 +385,13 @@ if __name__ == "__main__":
    試しに28行目の`mypy`の指摘について、通常は**Quick Fix**で自動修正できませんが、AIなら修正をすることができます。`Fix using Copilot`を選択すると、修正候補が表示され、Acceptボタンを押すと修正が反映されます。
 
    「**GitHub Copilot**」契約されている方は、便利な機能ですので、ぜひ使ってみてください。
+
+   GitHub Copilotについて、私の記事で紹介していますので、よろしければ見てください🐢
+   [**【GitHub Copilot】実践ガイド：図解と例で学ぶ使い方とコード品質向上のポイント**](https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot)
    :::
    ::::
 
-5. **関数コメントで、さらに分かりやすくします。**
+1. **関数コメントで、さらに分かりやすくします。**
    ここでは、`autoDocstring`という拡張機能を使って、関数コメントのひな型を自動で生成する方法を紹介します。次のように"(ダブルクォーテーション)を3回入力するだけで、関数コメントの概要、引数、戻り値のひな型を作ってくれます。
    ![docstring](/images/turtle-20240215-pymind/docstring.gif)
    *関数コメント(docstring)のひな型生成*
@@ -400,7 +403,7 @@ if __name__ == "__main__":
    *ヒント機能*
    せっかく書いたコメントをよりよく活用するために、ぜひこのスタイルでコメントを書いてみてください。
 
-6. **関数名も分かりやすい名称に修正します。**
+2. **関数名も分かりやすい名称に修正します。**
 g_rand、g_sums、p_resは、パッとみて関数名が分かりにくいと感じる方もいると思いますので、get_random_numbers、get_sum、print_resultに修正します。
 関数名や変数名は、プロジェクトによっては命名ルールが決まっている場合がありますので、その際はプロジェクトのルール等に従ってください。
 
@@ -481,3 +484,8 @@ if __name__ == "__main__":
 https://zenn.dev/safubuki/articles/turtle-20240128-stable-ext
 
 https://github.com/safubuki/sd-webui-latent-regional-helper
+
+## 更新履歴
+
+- **2024/03/02**
+  ブレークタイム「Quick FixのFix using CopilotとExplain using Copilotとは？」の項目に私が書いたGitHub Copilotの記事のリンクを追加しました。
