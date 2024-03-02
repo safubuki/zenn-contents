@@ -3,7 +3,7 @@ title: "【GitHub Copilot】実践ガイド：図解と例で学ぶ使い方と�
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [githubcopilot,vscode,vscode拡張機能,python]
-published: false
+published: true
 ---
 AIがコードを書いてくれる画期的なツール、**GitHub Copilot**をご存知ですか？
 
