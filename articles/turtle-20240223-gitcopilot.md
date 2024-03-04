@@ -294,22 +294,22 @@ pyファイルの中でインラインチャットが呼び出され、指示を
 
 インラインチャットで行った円を描画するプログラムの作成を、チャット機能でも同じように行うことができました。なお、チャット機能は、**エディタ左側のチャットタブ**を選択することで使うことができます。
 
-![cop_c_0](/images/turtle-20240223-gitcopilot/cop_c_0.png =350x)
+![cop_c_0](/images/turtle-20240223-gitcopilot/cop_c_0.png =450x)
 *チャット機能タブ*
 
 作成したコードは、**Insert at Cursor ボタン**を押すことで、ファイルに簡単に反映することができます。
 
-![cop_c_2](/images/turtle-20240223-gitcopilot/cop_c_2.png =350x)
+![cop_c_2](/images/turtle-20240223-gitcopilot/cop_c_2.png =450x)
 *Insert at Cursor ボタンによる追加*
 
 会話の話題を切り替えたときは、チャット画面上部の**＋のボタン**(New Chat)を押すことで、今までの会話をクリアして、新しく始めることができます。また、これまでの会話内容を確認したいときは、**時計マークのボタン**(Show Chats)を押すことで見ることができます。
 
-![cop_c_btn](/images/turtle-20240223-gitcopilot/cop_c_btn.png =350x)
+![cop_c_btn](/images/turtle-20240223-gitcopilot/cop_c_btn.png =450x)
 *新しい会話を始める・これまでの会話を表示する ボタン*
 
 なお、チャット機能の注意点として、プログラミングに関する内容以外は受け付けてくれないことです。オススメの観光地は別のAIに聞いてください🙇‍♂️
 
-![cop_c_kanko](/images/turtle-20240223-gitcopilot/cop_c_kanko.png =450x)
+![cop_c_kanko](/images/turtle-20240223-gitcopilot/cop_c_kanko.png =500x)
 *オススメの観光地は教えてくれない*
 
 このように、コード生成をサポートしてもらったり、困ったことを質問して解決したいときなどに、チャット機能は、素早くエディタ上で頼れる存在です。
