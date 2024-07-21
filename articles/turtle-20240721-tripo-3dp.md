@@ -83,26 +83,73 @@ TripoSR使用時、下図のようにGPUメモリを消費します。8GBのGPU�
 
 ### 環境構築
 
-ここでは肝となる「TripoSR」のみを詳細に解説させていただき、その他については、簡易的な説明か、最低限必要なURLを提示させていただきます。環境構築方法は、リンク先の手順に従っていただくか、インターネットを検索いただくと、分かりやすいブログ記事がヒットすると思います。
+ここでは肝となる「**TripoSR**」のみを詳細に解説させていただき、その他については、簡易的な説明か、最低限必要なURLを提示させていただきます。環境構築方法は、リンク先の手順に従っていただくか、インターネットを検索いただくと、分かりやすいブログ記事がヒットすると思います。
 
-#### ● TripoSR
+#### ● Windows版 Python（必須）
+
+TripoSR利用にあたって、Pythonがインストールされていることが大前提となりますので、まだの方はまずインストールしてください。以下のサイトの「Pythonを導入する」の章が参考になります。
+
+https://www.useful-python.com/env-python-vscode-windows/
+
+#### ★ TripoSR（必須）
+
+1. **TripoSRのソースを次のGitHubから取得**
+
+https://github.com/VAST-AI-Research/TripoSR
+
+2. **Codeボタンを選択、Download ZIPで任意の場所に保存後、展開**
+
+![](/images/turtle-20240721-tripo-3dp/tripo_git.png =600x)
+
+:::details Gitを扱える方の場合（任意）
+Gitを扱える方は、zipでダウンロードせずに、cloneコマンドでクローンしていただいてもかまいません。
+```
+git clone https://github.com/VAST-AI-Research/TripoSR.git
+```
+:::
+
+3. **コマンドプロンプトでTripoSRのフォルダ内に移動**
+
+![](/images/turtle-20240721-tripo-3dp/cmd_tripo_cd.png =500x)
+
+4. **次のコマンドを入力して、venv（Python仮想環境）を作成。**
+
+```
+py.exe -m venv .venv
+```
+
+5. **Python仮想環境作成完了後、次のコマンドで仮想環境アクティベート（有効化）**
+
+```
+.\.venv\Scripts\activate
+```
+
+![](/images/turtle-20240721-tripo-3dp/cmd_tripo_active.png =500x)
+*(.venv)が表示されていたらOK*
+
+★★★ ここから ★★★
+手順5の説明文から考える。
 
 
-#### ● Copilot
+6.
 
-Microsoft Edgeブラウザを開いて、検索欄の次のアイコンをクリックします。
+#### ● Copilot（任意）
+
+画像生成にCopilotを使用する場合、Microsoft Edgeブラウザを開いて、検索欄の次のアイコンをクリックするだけで使用できます。
 
 ![](/images/turtle-20240721-tripo-3dp/cop_icon.png =250x)
 *Copilotアイコン*
 
-#### ● AUTODESK Fusion
+#### ● AUTODESK Fusion（任意）
 
-公式サイトのページを開き「無償体験版をダウンロード」選択し、非商用を選択した後、手順に従って進めます。アカウントの作成が必要になります。
+OBJファイル→STLファイル変換にFusionを利用する場合、以下の公式サイトのページを開きます。「無償体験版をダウンロード」選択し、非商用を選択した後、手順に従って進めます。アカウント作成まだの方は必要になります。
 
 https://www.autodesk.com/jp/products/fusion-360/overview?term=1-YEAR&tab=subscription
 
-#### ● Windows版 Python
 
-以下のサイトの「Pythonを導入する」の章が参考になります。
 
-https://www.useful-python.com/env-python-vscode-windows/
+
+
+
+
+
