@@ -14,12 +14,12 @@ published: false
 なぜなら、一般的に3Dプリントする際は、3D形状を表現した3Dモデルデータが必要だからです。サンプル画像で示したようなjpgやpngなど、たった1枚の画像データから3Dプリントすることはできません。
 それが、AIを利用することでできるわけですから、趣味の3Dプリンタと組み合わせたらどんな作品が作れるのかとワクワクしました。
 
-これを可能にしたのが「TripoSR」です。TripoSRは、1枚の画像から素早く高品質な3Dモデルデータを作成するAIです。Stable Diffusionなどの画像生成AIで有名な、Stability AIが、Tripo AIという企業と提携して作成したものです。
+これを可能にしたのが「**TripoSR**」です。TripoSRは、1枚の画像から素早く高品質な3Dモデルデータを作成するAIです。Stable Diffusionなどの画像生成AIで有名な、Stability AIが、Tripo AIという企業と提携して作成したものです。
 
 詳細は以下のページをご覧ください。
 https://ja.stability.ai/blog/triposr-3d-generation
 
-これまでAIや3Dプリンタをそれぞれ楽しんでいましたが、TripoSRを活用することで、AIと3Dプリンタのモノづくりの距離が縮まり、活用の範囲が広がります。
+これまで、AIと3Dプリンタは別々に楽しんでいましたが、TripoSRを活用することで、AIと3Dプリンタの距離がグッと縮まり、モノづくりへの活用の範囲が一気に広がりました！
 
 この記事を読んで、ぜひAIモノづくりにチャレンジしてみてください👍
 
@@ -42,30 +42,33 @@ https://ja.stability.ai/blog/triposr-3d-generation
 
 以下に、必要なものを一覧で示します。
 
-- **画像生成AI**
-インターネット上には、TripoSRにより精度高く3Dモデルデータを生成するための画像データが少ないです。そのため、画像生成AIで目的の画像を生成します。普段使っているものをご使用ください。代表的なものは次の通りです。
-  - ***ChatGPT Plus***（有料・オンライン）
-  - ***Copilot***（無料・オンライン）
-  ChatGPTとCopilotは、DALL-E3という同じ画像生成AIを使用しています。ChatGPTでは細かな設定も可能ですが、まずはCopilotで試してみると良いでしょう。
-  - ***Stable Diffusion***（無料・ローカル）
-- **3Dモデル生成AI**
-  - ***TripoSR***
-  今回の主役です！
-- **3D CADソフト**
-TripoSRが生成するOBJファイルを、STLファイルに変換するために使用します。変換できるのであれば、どのようなソフトでも構いませんが、以下のソフトがオススメです。
-  - ***AUTODESK Fusion***
-  変換だけではなく、自ら3Dモデルを作成する際にも大変便利なCADソフトです。
-- **スライサソフト**
-普段使っているものをご使用ください。なお、次のソフトが広く使われいます。
-  - ***cura***
-  私も3Dプリンタに付属していた、curaベースのソフトを愛用しています。
-- **3Dプリンタ**
-所有されている3Dプリンタをご使用ください。私は次の機種を愛用しています。
-  - ***Neptune 3 pro***（ELEGOO社）
-- **Windows版 Python**
-TripoSRは、Python上で動作しますので、ご準備ください。
-- **Windows PC**
-TripoSRを使用するため、後述の動作環境程度のPCを準備してください。
+- **ソフト**
+  - **画像生成AI**
+  インターネット上には、TripoSRにより精度高く3Dモデルデータを生成するための画像データが少ないです。そのため、画像生成AIで目的の画像を生成します。普段使っているものをご使用ください。代表的なものは次の通りです。
+    - ***ChatGPT Plus***（有料・オンライン）
+    - ***Copilot***（無料・オンライン）
+    ChatGPTとCopilotは、DALL-E3という同じ画像生成AIを使用しています。ChatGPTでは細かな設定も可能ですが、まずはCopilotで試してみると良いでしょう。
+    - ***Stable Diffusion***（無料・ローカル）
+  - **3Dモデル生成AI**
+    - ***TripoSR***
+    今回の主役です！
+  - **3D CADソフト**
+  TripoSRが生成するOBJファイルを、STLファイルに変換するために使用します。変換できるのであれば、どのようなソフトでも構いませんが、以下のソフトがオススメです。
+    - ***AUTODESK Fusion***
+    変換だけではなく、自ら3Dモデルを作成する際にも大変便利なCADソフトです。
+  - **スライサソフト**
+  普段使っているものをご使用ください。なお、次のソフトが広く使われいます。
+    - ***cura***
+    私も3Dプリンタに付属していた、curaベースのソフトを愛用しています。
+  - **Windows版 Python**
+  TripoSRは、Python上で動作しますので、ご準備ください。
+
+- **ハード**
+  - **3Dプリンタ**
+  所有されている3Dプリンタをご使用ください。私は次の機種を愛用しています。
+    - ***Neptune 3 pro***（ELEGOO社）
+  - **Windows PC**
+  TripoSRを使用するため、後述の動作環境程度のPCを準備してください。
 
 ### PC必要スペック
 
@@ -87,15 +90,82 @@ TripoSR使用時、下図のようにGPUメモリを消費します。8GBのGPU�
 
 ## 環境構築
 
-環境構築では、肝となる「**TripoSR**」のみを詳細に解説させていただき、その他については、簡易的な説明か、最低限必要なURLを提示させていただきます。環境構築方法は、リンク先の手順に従っていただくか、インターネットを検索いただくと、分かりやすいブログ記事などがヒットすると思います。
+環境構築では、肝となる「**TripoSR**」のみを詳細に解説させていただき、その他については、簡易的な説明か、最低限必要なURLを提示させていただきます。なお、既に導入済みのものについては、スキップしてください。
 
-### Windows版 Python
+### ●Python
 
-TripoSR利用にあたって、Pythonがインストールされていることが前提となりますので、まだの方はまずインストールしてください。以下のサイトの「Pythonを導入する」の章が参考になります。
+TripoSR利用にあたって、Pythonがインストールされていることが前提となりますので、まだの方はまずインストールしてください。
 
-https://www.useful-python.com/env-python-vscode-windows/
+1. **インストーラをダウンロード**
+以下の公式サイトにアクセスして、インストーラをダウンロードします。
 
-### TripoSR
+https://www.python.org/downloads/
+
+![](/images/turtle-20240721-tripo-3dp/python_1.png =500x)
+*インストーラのダウンロード*
+
+2. **Pythonインストール**
+インストーラを実行すると、次のような画面が表示されますので、画面下部のチェックボックス両方にチェックを入れて「Install Now」をクリックしてください。インストールが完了したら「Close」ボタンで終了します。
+※「***Add python.exe to PATH***」は、デフォルトでチェックが入っていないので、チェックを入れ忘れないよう注意してください。
+
+![](/images/turtle-20240721-tripo-3dp/python_2.png =500x)
+*Pythonインストーラ画面*
+
+### ●Git for Windows
+
+TripoSR環境構築の際に、Gitというソースコードを管理する仕組みを利用して、必要なソフトを取得する必要があります。「Git for Windows」というツールを利用します。以下の記事を参考にして、インストールしてください。
+
+https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c
+
+### ●Build Tools for Visual Studio
+
+TripoSRそのものはpythonですが、torchmcubesのような一部のライブラリのコンパイルにC++コンパイラとして「Build Tools for Visual Studio」を使用します。
+
+1. **インストーラをダウンロード**
+以下の公式サイトにアクセスして、インストーラをダウンロードします。
+※リンクをクリックすると目的の箇所にフォーカスします。
+
+https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2022
+
+![](/images/turtle-20240721-tripo-3dp/down_build_tool.png =600x)
+*インストーラのダウンロード*
+
+2. **Build Toolsのインストール**
+インストーラを実行すると、次のような画面が表示されますので「**C++によるデスクトップ開発**」**チェックボックスにチェック**を入れてインストールをクリックしてください。
+※インストールの詳細は、デフォルトチェックのままでOKです。
+
+![](/images/turtle-20240721-tripo-3dp/build_tool.png =600x)
+*Build Toolsインストーラ画面*
+
+### ●CUDA Toolkit
+
+TripoSR環境構築の際に、Gitというソースコードを管理する仕組みを利用して、必要なソフトを取得する必要があります。「Git for Windows」というツールを利用します。以下の記事を参考にして、インストールしてください。
+
+1. **Toolkitが既にあるか確認**
+次のコマンドを実行して、例のようにバージョン表示などがされる場合は、既に存在していますので、以降の手順は不要です。
+
+https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2022
+
+![](/images/turtle-20240721-tripo-3dp/down_build_tool.png =600x)
+*インストーラのダウンロード*
+
+1. **インストーラをダウンロード**
+以下の公式サイトにアクセスして、インストーラをダウンロードします。
+※リンクをクリックすると目的の箇所にフォーカスします。
+
+https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2022
+
+![](/images/turtle-20240721-tripo-3dp/down_build_tool.png =600x)
+*インストーラのダウンロード*
+
+2. **Build Toolsのインストール**
+インストーラを実行すると、次のような画面が表示されますので「**C++によるデスクトップ開発**」**チェックボックスにチェック**を入れてインストールをクリックしてください。
+※インストールの詳細は、デフォルトチェックのままでOKです。
+
+![](/images/turtle-20240721-tripo-3dp/build_tool.png =600x)
+*Build Toolsインストーラ画面*
+
+### ●TripoSR
 
 TripoSRについては、導入方法を詳細に解説します。
 
@@ -116,16 +186,22 @@ git clone https://github.com/VAST-AI-Research/TripoSR.git
 ```
 :::
 
-2. **コマンドプロンプトでTripoSRのフォルダ内に移動**
-コマンドプロンプトを開き、TripoSRのフォルダに移動します。
+2. **Windows PowerShell起動**
+検索窓に「windowspowershell」と入力し、PowerShellを起動します。
+
+![](/images/turtle-20240721-tripo-3dp/power_shell.png =250x)
+
+3. **TripoSRのフォルダ内に移動**
+PowerShellで、TripoSRのフォルダに移動します。
 CドライブにTripoSRのフォルダを保存、展開した場合は、次のコマンドを入力します。
 ※ご自身の環境に応じて、適宜以下のコマンドは変更ください。
+
 ```
 cd c:\TripoSR
 ```
 
-![](/images/turtle-20240721-tripo-3dp/cmd_tripo_cd.png =400x)
-*ripoSRフォルダ内へ移動*
+![](/images/turtle-20240721-tripo-3dp/cmd_tripo_cd.png =350x)
+*TripoSRフォルダ内へ移動*
 
 3. **venv（Python仮想環境）を作成**
 コマンドを入力し、TripoSRフォルダ内にvenv（Python仮想環境）を作成します。
@@ -133,6 +209,7 @@ cd c:\TripoSR
 ```
 py.exe -m venv .venv
 ```
+
 ::::message
 Tips
 :::details なぜ、Python仮想環境を利用するのか？（クリックで開く）
@@ -162,11 +239,11 @@ Pythonで生成AIの環境を構築する際に、仮想環境を作成するこ
 .\.venv\Scripts\activate
 ```
 
-![](/images/turtle-20240721-tripo-3dp/cmd_tripo_active.png =400x)
-*仮想環境アクティベート*
+![](/images/turtle-20240721-tripo-3dp/cmd_tripo_active.png =350x)
+*仮想環境アクティベート（有効化）*
 
 5. **ツールアップデート**
-コマンド入力し、pip, wheel, setuptoolsのアップデートを行います。
+コマンド入力し、仮想環境内のpip, wheel, setuptoolsのアップデートを行います。
 アップデートに成功したら、successfullyが表示されます。
 
 ```
@@ -200,15 +277,30 @@ nvidia-smi
 
 なお、Pytorchの選択画面にバージョン「12.3」はありませんが、12.3が表示された場合は「12.1」を選択することでうまくいきます。
 :::
+
+:::details 以前のバージョンのPytorchをインストールしたい場合（クリックで開く）
+今後、Pytorchのバージョンがどんどん上がっていき、場合によっては最新のバージョンだと正常に動作しないケースが出てくる可能性があります。そのような場合、以下の公式サイトを参考にすることで、以前のバージョンをインストールことができます。
+
+https://pytorch.org/get-started/previous-versions/
+
+例えば、v2.3.1（CUDA12.1）をインストールするときは、次の内容を参照して、
+
+![](/images/turtle-20240721-tripo-3dp/prev_torch.png =600x)
+*v2.3.1のインストールコマンド*
+
+赤枠で囲った、次のコマンドを入力します。
+
+```
+pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
+```
+※ご自身の環境に応じて、適切なコマンドを選択してください。
+なお、本記事執筆時点（2024年7月）においては、v2.3.1、v2.4.0で動作を確認しております。
+:::
 ::::
 
 7. **pytorchインストール（コマンド実行）**
 前の手順でコピーしたコマンドをコマンドプロンプトに貼り付けて実行します。
-```
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-```
-&emsp;&emsp;※ 上記コマンドは私の環境の場合になります。
-&emsp;&emsp;エラーなど無く無事終わると、次のような画面になります。
+エラーなど無く無事終わると、次のような画面になります。
 
 ![](/images/turtle-20240721-tripo-3dp/pytorch_success.png =550x)
 *Pytorch コマンド実行画面*
@@ -218,6 +310,23 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 
 ```
 set DISTUTILS_USE_SDK=1
+```
+
+8. **TripoSRのrequirements.txt書き換え**
+TripoSRの環境構築に必要な依存モジュールを記した**requirements.txt**を書き換えます。
+具体的には、この中の「torchmcubes」というモジュールが、最新バージョンだとcmakeコンパイルに失敗するため、以前のバージョンを指定します。
+変更するファイルの場所は`C:\TripoSR\requirements.txt`です。
+※ ご自身でTripoSRを保存した場所によって、ファイルの場所も異なります。
+
+
+![](/images/turtle-20240721-tripo-3dp/req_before.png =550x)
+*requirements.txt 変更前*
+
+![](/images/turtle-20240721-tripo-3dp/req_after.png =550x)
+*requirements.txt 変更後*
+
+```
+git+https://github.com/tatsy/torchmcubes.git@cbb3c3795b1e168bf81e8dee28623eaf5c33cd1c
 ```
 
 9. **TripoSRが必要なライブラリをインストール**
@@ -232,14 +341,14 @@ pip install -r requirements.txt
 
 
 
-### Copilot
+### ●Copilot
 
 画像生成にCopilotを使用する場合、Microsoft Edgeブラウザを開いて、検索欄の次のアイコンをクリックするだけで使用できます。
 
 ![](/images/turtle-20240721-tripo-3dp/cop_icon.png =250x)
 *Copilotアイコン*
 
-### AUTODESK Fusion
+### ●AUTODESK Fusion
 
 OBJファイル→STLファイル変換にFusionを利用する場合、以下の公式サイトのページを開きます。「無償体験版をダウンロード」選択し、非商用を選択した後、手順に従って進めます。アカウント作成まだの方は必要になります。
 
