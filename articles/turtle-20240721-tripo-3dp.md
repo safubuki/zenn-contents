@@ -36,50 +36,12 @@ https://ja.stability.ai/blog/triposr-3d-generation
 
 図で示すように、OSS(オープンソースソフトウェア)のAIや非商用利用無償のツールを複数組み合わせることで、費用をかけずに作成することを目指します。
 
-## 事前準備
+## 必要なもの
 
-### 必要なもの
+次に、必要なものをソフトウェアとハードウェアに分類して一覧にしました。使用するソフトが多く感じるかもしれませんが、環境構築や実行手順で触れますので、ご安心ください。
 
-以下に、必要なものを一覧で示します。
-
-- **ソフト**
-  - **画像生成AI**
-  インターネット上には、TripoSRにより精度高く3Dモデルデータを生成するための画像データが少ないです。そのため、画像生成AIで目的の画像を生成します。普段使っているものをご使用ください。代表的なものは次の通りです。
-    - ***ChatGPT Plus***（有料・オンライン）
-    - ***Copilot***（無料・オンライン）
-    ChatGPTとCopilotは、DALL-E3という同じ画像生成AIを使用しています。ChatGPTでは細かな設定も可能ですが、まずはCopilotで試してみると良いでしょう。
-    - ***Stable Diffusion***（無料・ローカル）
-  - **3Dモデル生成AI**
-    - ***TripoSR***
-    今回の主役です！
-  - **3D CADソフト**
-  TripoSRが生成するOBJファイルを、STLファイルに変換するために使用します。変換できるのであれば、どのようなソフトでも構いませんが、以下のソフトがオススメです。
-    - ***AUTODESK Fusion***
-    変換だけではなく、自ら3Dモデルを作成する際にも大変便利なCADソフトです。
-  - **スライサソフト**
-  普段使っているものをご使用ください。なお、次のソフトが広く使われいます。
-    - ***cura***
-    私も3Dプリンタに付属していた、curaベースのソフトを愛用しています。
-  - **Windows版 Python**
-  TripoSRは、Python上で動作しますので、ご準備ください。
-
-- **ハード**
-  - **3Dプリンタ**
-  所有されている3Dプリンタをご使用ください。私は次の機種を愛用しています。
-    - ***Neptune 3 pro***（ELEGOO社）
-  - **Windows PC**
-  TripoSRを使用するため、後述の動作環境程度のPCを準備してください。
-
-### PC必要スペック
-
-私が問題なくTripoSRを使用している、PCの動作環境を示します。
-このPCと同等かそれ以上のPCをご準備ください。
-
-- OS：**Windows 11**
-- CPU：**AMD Ryzen 5 5500**
-- メモリ：**16GB**
-- GPU：**GeForce RTX3060**
-- GPUメモリ：**12GB**
+![](/images/turtle-20240721-tripo-3dp/needs_list.png)
+*必要なものリスト*
 
 補足：
 TripoSR使用時、下図のようにGPUメモリを消費します。8GBのGPUメモリですと、エラーになるという報告もありますので、GPUメモリを12GB以上搭載しているGPUを選定すると安心です。
@@ -90,11 +52,11 @@ TripoSR使用時、下図のようにGPUメモリを消費します。8GBのGPU�
 
 ## 環境構築
 
-環境構築では、肝となる「**TripoSR**」のみを詳細に解説させていただき、その他については、簡易的な説明か、最低限必要なURLを提示させていただきます。なお、既に導入済みのものについては、スキップしてください。
+環境構築では、肝となる「**TripoSR**」を中心に説明させていただき、その他については、簡易的な手順説明か、最低限必要なURLを提示させていただきます。なお、既に導入済みのものについては、スキップしてください。
 
 ### ●Python
 
-TripoSR利用にあたって、Pythonがインストールされていることが前提となりますので、まだの方はまずインストールしてください。
+以下の手順に従って、インストールを行ってください。
 
 1. **インストーラをダウンロード**
 以下の公式サイトにアクセスして、インストーラをダウンロードします。
@@ -113,13 +75,13 @@ https://www.python.org/downloads/
 
 ### ●Git for Windows
 
-TripoSR環境構築の際に、Gitというソースコードを管理する仕組みを利用して、必要なソフトを取得する必要があります。「Git for Windows」というツールを利用します。以下の記事を参考にして、インストールしてください。
+以下の記事を参考に、インストールしてください。
 
 https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c
 
 ### ●Build Tools for Visual Studio
 
-TripoSRそのものはpythonですが、torchmcubesのような一部のライブラリのコンパイルにC++コンパイラとして「Build Tools for Visual Studio」を使用します。
+以下の手順に従って、インストールを行ってください。
 
 1. **インストーラをダウンロード**
 以下の公式サイトにアクセスして、インストーラをダウンロードします。
@@ -139,31 +101,51 @@ https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2
 
 ### ●CUDA Toolkit
 
-TripoSR環境構築の際に、Gitというソースコードを管理する仕組みを利用して、必要なソフトを取得する必要があります。「Git for Windows」というツールを利用します。以下の記事を参考にして、インストールしてください。
+以下の手順に従って、インストールを行ってください。
 
-1. **Toolkitが既にあるか確認**
-次のコマンドを実行して、例のようにバージョン表示などがされる場合は、既に存在していますので、以降の手順は不要です。
+1. **Toolkitが既にインストール済みか確認**
+次のコマンドを実行して、バージョン表示などがされる場合は、Toolkitインストール済みのため、スキップしてください。
 
-https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2022
+```
+nvcc --version
+```
 
-![](/images/turtle-20240721-tripo-3dp/down_build_tool.png =600x)
+![](/images/turtle-20240721-tripo-3dp/nvcc_check.png =400x)
+*nvcc --versionコマンド実行（インストール済み）*
+
+2. **CUDA Toolkitのダウンロード①**
+次の公式サイトにアクセスして、GPUドライババージョンに応じたToolkitをArchived Releasesの中から選択します。
+※私の場合、GPUドライババージョン「546.01」にマッチする「CUDA Toolkit 12.3.0 (October 2023)」を選択しました。
+
+https://developer.nvidia.com/cuda-toolkit-archive
+
+::::message
+Tips
+:::details GPUの型番にあったCUDAバージョンの選び方（クリックで開く）
+GPUの型番やGPUドライバのバージョンに応じて、適切なCUDAバージョンの選択方法について、次のページで解説されていますので、必要に応じて参照してください。
+
+https://zenn.dev/yumizz/articles/73d6c7d1085d2f
+:::
+::::
+
+3. **CUDA Toolkitのダウンロード②**
+選択すると、次のような画面が表示されるので、自身の環境に応じて選択し、ダウンロードします。
+
+![](/images/turtle-20240721-tripo-3dp/toolkit_down.png =550x)
 *インストーラのダウンロード*
 
-1. **インストーラをダウンロード**
-以下の公式サイトにアクセスして、インストーラをダウンロードします。
-※リンクをクリックすると目的の箇所にフォーカスします。
+4. **CUDA Toolkitのインストール**
+インストーラを実行すると、次のような画面が表示されるので、使用許諾了承して、高速（推奨）選択し、CUDA Visual Studio Integrationの確認項目にチェックを入れて、次々進みます。
 
-https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2022
+![](/images/turtle-20240721-tripo-3dp/nvidia_2.png =500x)
+*CUDA Toolkitインストーラ画面 オプション選択（一部抜粋）*
 
-![](/images/turtle-20240721-tripo-3dp/down_build_tool.png =600x)
-*インストーラのダウンロード*
+5. **CUDA Toolkitのインストールの確認**
+手順1同様、次のコマンドで確認します。
 
-2. **Build Toolsのインストール**
-インストーラを実行すると、次のような画面が表示されますので「**C++によるデスクトップ開発**」**チェックボックスにチェック**を入れてインストールをクリックしてください。
-※インストールの詳細は、デフォルトチェックのままでOKです。
-
-![](/images/turtle-20240721-tripo-3dp/build_tool.png =600x)
-*Build Toolsインストーラ画面*
+```
+nvcc --version
+```
 
 ### ●TripoSR
 
