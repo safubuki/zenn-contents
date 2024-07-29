@@ -43,7 +43,7 @@ https://ja.stability.ai/blog/triposr-3d-generation
 ![](/images/turtle-20240721-tripo-3dp/needs_list.png)
 *必要なものリスト*
 
-補足：
+PC必要スペックに関する補足：
 TripoSR使用時、下図のようにGPUメモリを消費します。8GBのGPUメモリですと、エラーになるという報告もありますので、GPUメモリを12GB以上搭載しているGPUを選定すると安心です。
 ※この手のGPUメモリ不足は、何らかの回避策がある可能性ありますが、本ブログでは扱いません。ご了承ください。
 
@@ -52,7 +52,7 @@ TripoSR使用時、下図のようにGPUメモリを消費します。8GBのGPU�
 
 ## 環境構築
 
-環境構築では、肝となる「**TripoSR**」を中心に説明させていただき、その他については、簡易的な手順説明か、最低限必要なURLを提示させていただきます。なお、既に導入済みのものについては、スキップしてください。
+環境構築では、肝となる「**TripoSR**」を中心に説明させていただき、その他については、簡易的な手順説明か、最低限必要なURLを提示させていただきます。インストールは、上から順番に実施してください。なお、既に導入済みのものについては、スキップして構いません。
 
 ### ●Python
 
@@ -104,7 +104,7 @@ https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2
 以下の手順に従って、インストールを行ってください。
 
 1. **Toolkitが既にインストール済みか確認**
-次のコマンドを実行して、バージョン表示などがされる場合は、Toolkitインストール済みのため、スキップしてください。
+次のコマンドを実行して、バージョンなどが表示されたら、Toolkitインストール済みのため、スキップしてください。
 
 ```
 nvcc --version
@@ -122,9 +122,10 @@ https://developer.nvidia.com/cuda-toolkit-archive
 ::::message
 Tips
 :::details GPUの型番にあったCUDAバージョンの選び方（クリックで開く）
-GPUの型番やGPUドライバのバージョンに応じて、適切なCUDAバージョンの選択方法について、次のページで解説されていますので、必要に応じて参照してください。
+GPUの型番やGPUドライバのバージョンに応じて、適切なCUDAバージョンの選択方法について、次のページで解説されています。必要に応じて参照ください。
 
 https://zenn.dev/yumizz/articles/73d6c7d1085d2f
+※なお「Dockerイメージを用いたCUDA環境構築」については対象外です。
 :::
 ::::
 
@@ -140,12 +141,14 @@ https://zenn.dev/yumizz/articles/73d6c7d1085d2f
 ![](/images/turtle-20240721-tripo-3dp/nvidia_2.png =500x)
 *CUDA Toolkitインストーラ画面 オプション選択（一部抜粋）*
 
-5. **CUDA Toolkitのインストールの確認**
-手順1同様、次のコマンドで確認します。
+5. **CUDA Toolkitのインストール確認**
+次のコマンドで、CUDA Toolkitインストールができていることを確認します。バージョンなどが表示されたら成功です
 
 ```
 nvcc --version
 ```
+![](/images/turtle-20240721-tripo-3dp/nvcc_check.png =400x)
+*nvcc --versionコマンド実行（インストール成功）*
 
 ### ●TripoSR
 
@@ -226,7 +229,7 @@ Pythonで生成AIの環境を構築する際に、仮想環境を作成するこ
 
 5. **ツールアップデート**
 コマンド入力し、仮想環境内のpip, wheel, setuptoolsのアップデートを行います。
-アップデートに成功したら、successfullyが表示されます。
+エラー表示なく、次の画面のようにsuccessfullyが表示されたら成功です。
 
 ```
 py.exe -m pip install --upgrade pip wheel setuptools
@@ -281,8 +284,8 @@ pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https
 ::::
 
 7. **pytorchインストール（コマンド実行）**
-前の手順でコピーしたコマンドをコマンドプロンプトに貼り付けて実行します。
-エラーなど無く無事終わると、次のような画面になります。
+手順6でコピーしたコマンドをコマンドプロンプトに貼り付けて実行します。
+エラー表示なく、次の画面のようにsuccessfullyが表示されたら成功です。
 
 ![](/images/turtle-20240721-tripo-3dp/pytorch_success.png =550x)
 *Pytorch コマンド実行画面*
@@ -297,12 +300,14 @@ set DISTUTILS_USE_SDK=1
 8. **TripoSRのrequirements.txt書き換え**
 TripoSRの環境構築に必要な依存モジュールを記した**requirements.txt**を書き換えます。
 具体的には、この中の「torchmcubes」というモジュールが、最新バージョンだとcmakeコンパイルに失敗するため、以前のバージョンを指定します。
-変更するファイルの場所は`C:\TripoSR\requirements.txt`です。
-※ ご自身でTripoSRを保存した場所によって、ファイルの場所も異なります。
+変更するファイルの場所は`<path>\TripoSR\requirements.txt`です。
+※ requirements.txtは、TripoSRフォルダの直下にあります。
 
 
 ![](/images/turtle-20240721-tripo-3dp/req_before.png =550x)
 *requirements.txt 変更前*
+
+&emsp;&emsp;4行目を次の通り、書き換えます。
 
 ![](/images/turtle-20240721-tripo-3dp/req_after.png =550x)
 *requirements.txt 変更後*
@@ -312,27 +317,25 @@ git+https://github.com/tatsy/torchmcubes.git@cbb3c3795b1e168bf81e8dee28623eaf5c3
 ```
 
 9. **TripoSRが必要なライブラリをインストール**
-次のコマンドを実行して、requirements.txt（要求ファイル）に基づき、TripoSRが必要なライブラリをインストールします。
+次のコマンドを実行して、手順8で一部書き換えたrequirements.txt（要求ファイル）に基づき、TripoSRが必要なライブラリをインストールします。
 
 ```
 pip install -r requirements.txt
 ```
 
-★環境構築に失敗するので、環境作り直して再度実験
-★可能性→コマンドプロンプト、Cフォルダ直下→再確認
+&emsp;&emsp;エラー表示なく、次の画面のようにsuccessfullyが表示されたら成功です。
 
-
+![](/images/turtle-20240721-tripo-3dp/req_success.png =600x)
+*requirements.txt installコマンド実行画面*
 
 ### ●Copilot
-
-画像生成にCopilotを使用する場合、Microsoft Edgeブラウザを開いて、検索欄の次のアイコンをクリックするだけで使用できます。
+像生成にCopilotを使用する場合、Microsoft Edgeブラウザを開いて、検索欄の次のアイコンをクリックするだけで使用できます。
 
 ![](/images/turtle-20240721-tripo-3dp/cop_icon.png =250x)
 *Copilotアイコン*
 
 ### ●AUTODESK Fusion
-
-OBJファイル→STLファイル変換にFusionを利用する場合、以下の公式サイトのページを開きます。「無償体験版をダウンロード」選択し、非商用を選択した後、手順に従って進めます。アカウント作成まだの方は必要になります。
+OBJファイル→STLファイル変換にFusionを利用する場合、以下の公式サイトのページにアクセスします。まず「無償体験版をダウンロード」ボタンをクリックします。次のページが表示されたら「非商用（趣味利用版 機能限定 ）」を選択して、個人用Fusion360を入手ボタンをクリックし、以降は手順に従ってインストールを進めます。アカウント作成の作成が必要になりますので、作成してください。
 
 https://www.autodesk.com/jp/products/fusion-360/overview?term=1-YEAR&tab=subscription
 
