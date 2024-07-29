@@ -329,7 +329,7 @@ pip install -r requirements.txt
 *requirements.txt installコマンド実行画面*
 
 ### ●Copilot
-像生成にCopilotを使用する場合、Microsoft Edgeブラウザを開いて、検索欄の次のアイコンをクリックするだけで使用できます。
+画像生成にCopilotを使用する場合、Microsoft Edgeブラウザを開いて、検索欄の次のアイコンをクリックするだけで使用できます。
 
 ![](/images/turtle-20240721-tripo-3dp/cop_icon.png =250x)
 *Copilotアイコン*
