@@ -51,7 +51,7 @@ TripoSR使用時、下図のようにGPUメモリを消費します。8GBのGPU�
 
 ## 環境構築
 
-環境構築では「**TripoSR**」を中心に説明し、その他については、簡易的な手順説明か、最低限必要なURLを提示します。環境構築は上から順に実施し、既に導入済みのものについては、スキップしてください。
+環境構築では「**TripoSR**」を中心に説明します。その他、TripoSRの環境を構築する上で必要なPythonやCUDA Toolkit等については、簡易的な説明を用意しておりますので、未導入の場合に限り、必要な項目を参照し、環境を構築してください。なお、環境構築は上から順に実施してください。
 
 ### ●Python
 
@@ -247,7 +247,7 @@ py.exe -m pip install --upgrade pip wheel setuptools
 pytorchと呼ばれる機械学習ライブラリをインストールします。
 以下のPytorch.orgサイトにアクセスし、少し下にスクロールすると、環境の選択画面があります。
 この選択画面で、自身の環境に合わせてポチポチ選択します。
-すると「Run this Command」欄（緑の線で囲った箇所）にコマンドが表示されますので、これをコピーしてください。
+すると「Run this Command」欄（赤線で囲った箇所）にコマンドが表示されますので、これをコピーしてください。
   
 https://pytorch.org/get-started/locally/
 
@@ -317,11 +317,13 @@ TripoSRの環境構築に必要な依存モジュールを記した**requirement
 ![](/images/turtle-20240721-tripo-3dp/req_after.png =550x)
 *requirements.txt 変更後*
 
+&emsp;&emsp;同じ内容のテキスト用意していますので、適宜ご使用ください。
+
 ```
 git+https://github.com/tatsy/torchmcubes.git@cbb3c3795b1e168bf81e8dee28623eaf5c33cd1c
 ```
 
-11. **TripoSRが必要なライブラリをインストール (仮想環境)**
+11.  **TripoSRが必要なライブラリをインストール (仮想環境)**
 次のコマンドを実行して、手順10で一部書き換えたrequirements.txt（要求ファイル）に基づき、TripoSRが必要なライブラリをインストールします。
 
 ```
@@ -378,24 +380,22 @@ pause
 
 以上で、TripoSRの導入方法の解説は終了です。
 
-### ●AUTODESK Fusion
-
-OBJファイル→STLファイル変換にAUTODESK Fusionを利用する場合、次の手順でインストールしてください。
+### ●3D CADソフト
 
 ::::message
 3D CADソフト環境構築
 :::details AUTODESK Fusionインストール手順（クリックで開く）
+OBJファイル→STLファイル変換にAUTODESK Fusionを利用する場合、次の手順でインストールしてください。
+
 1. 次の公式サイトのページにアクセスします。
 
-https://www.autodesk.com/jp/products/fusion-360/overview?term=1-YEAR&tab=subscription
+[![](/images/turtle-20240721-tripo-3dp/link_cad.png)](https://www.autodesk.com/jp/products/fusion-360/overview?term=1-YEAR&tab=subscription)
 
 2. 「無償体験版をダウンロード」ボタンをクリックします。
 3. 次のページが表示されたら「非商用（趣味利用版 機能限定 ）」を選択し「個人用Fusion360を入手」ボタンをクリックします。
 4. 以降は手順に従ってインストールを進めます。途中、アカウント作成の作成が必要になりますので作成してください。
 :::
 ::::
-
-
 
 ## 実行手順
 
