@@ -38,21 +38,20 @@ https://ja.stability.ai/blog/triposr-3d-generation
 
 ## 必要なもの
 
-次に、必要なものをソフトウェアとハードウェアに分類して一覧にしました。使用するソフトが多く感じるかもしれませんが、環境構築や実行手順で触れますので、ご安心ください。
+次に、必要なものをソフトウェアとハードウェアに分類してリストにしました。使用するソフトウェアが多く感じるかもしれませんが、環境構築や実行手順で触れますので、ご安心ください。
 
 ![](/images/turtle-20240721-tripo-3dp/needs_list.png)
 *必要なものリスト*
 
-PC必要スペックに関する補足：
+**PCスペックの補足：**
 TripoSR使用時、下図のようにGPUメモリを消費します。8GBのGPUメモリですと、エラーになるという報告もありますので、GPUメモリを12GB以上搭載しているGPUを選定すると安心です。
-※この手のGPUメモリ不足は、何らかの回避策がある可能性ありますが、本ブログでは扱いません。ご了承ください。
 
 ![](/images/turtle-20240721-tripo-3dp/gpu_memory.png =550x)
 *使用時のGPUメモリ消費量*
 
 ## 環境構築
 
-環境構築では、肝となる「**TripoSR**」を中心に説明させていただき、その他については、簡易的な手順説明か、最低限必要なURLを提示させていただきます。インストールは、上から順番に実施してください。なお、既に導入済みのものについては、スキップして構いません。
+環境構築では「**TripoSR**」を中心に説明し、その他については、簡易的な手順説明か、最低限必要なURLを提示します。環境構築は上から順に実施し、既に導入済みのものについては、スキップしてください。
 
 ### ●Python
 
@@ -67,7 +66,7 @@ https://www.python.org/downloads/
 *インストーラのダウンロード*
 
 2. **Pythonインストール**
-インストーラを実行すると、次のような画面が表示されますので、画面下部のチェックボックス両方にチェックを入れて「Install Now」をクリックしてください。インストールが完了したら「Close」ボタンで終了します。
+インストーラを実行すると、次のような画面が表示されますので、画面下部のチェックボックス両方にチェック（※）を入れて「Install Now」をクリックしてください。インストールが完了したら「Close」ボタンで終了します。
 ※「***Add python.exe to PATH***」は、デフォルトでチェックが入っていないので、チェックを入れ忘れないよう注意してください。
 
 ![](/images/turtle-20240721-tripo-3dp/python_2.png =500x)
@@ -93,7 +92,7 @@ https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2
 *インストーラのダウンロード*
 
 2. **Build Toolsのインストール**
-インストーラを実行すると、次のような画面が表示されますので「**C++によるデスクトップ開発**」**チェックボックスにチェック**を入れてインストールをクリックしてください。
+インストーラを起動すると、次のような画面が表示されるので「**C++によるデスクトップ開発**」**にチェック**を入れてインストールボタンをクリックしてください。
 ※インストールの詳細は、デフォルトチェックのままでOKです。
 
 ![](/images/turtle-20240721-tripo-3dp/build_tool.png =600x)
@@ -152,7 +151,7 @@ nvcc --version
 
 ### ●TripoSR
 
-TripoSRについては、導入方法を詳細に解説します。
+TripoSRについて、導入方法を詳細に解説します。
 
 1. **TripoSRのソースをGitHubから取得**
 まず、次のサイトにアクセスします。
@@ -179,7 +178,7 @@ git clone https://github.com/VAST-AI-Research/TripoSR.git
 3. **TripoSRのフォルダ内に移動**
 PowerShellで、TripoSRのフォルダに移動します。
 CドライブにTripoSRのフォルダを保存、展開した場合は、次のコマンドを入力します。
-※ご自身の環境に応じて、適宜以下のコマンドは変更ください。
+※ご自身の環境に合わせて、適宜以下のコマンドを変更ください。
 
 ```
 cd c:\TripoSR
@@ -188,7 +187,7 @@ cd c:\TripoSR
 ![](/images/turtle-20240721-tripo-3dp/cmd_tripo_cd.png =350x)
 *TripoSRフォルダ内へ移動*
 
-3. **venv（Python仮想環境）を作成**
+4. **venv（Python仮想環境）を作成**
 コマンドを入力し、TripoSRフォルダ内にvenv（Python仮想環境）を作成します。
 
 ```
@@ -212,11 +211,11 @@ Pythonで生成AIの環境を構築する際に、仮想環境を作成するこ
 ![](/images/turtle-20240721-tripo-3dp/venv_fig.png)
 *venv あり/なし比較図（クリックして拡大）*
 
-仮想環境を使うことで、Pythonのプロジェクト管理がより効率的かつ安全になります。venv初めてという方は、今後、生成AIに限らず、開発や実行環境の構築などで利用してみてください。
+仮想環境を使うことで、Pythonのプロジェクト管理がより効率的かつ安全になります。venvが初めてという方は、今後、生成AIに限らず、開発や実行環境の構築などで利用してみてください。
 :::
 ::::
 
-4. **仮想環境アクティベート（有効化）**
+5. **仮想環境アクティベート**
 コマンドを入力し、仮想環境をアクティベート（有効化）します。
 下図のように(.venv)が表示されたら、アクティベート成功です。
 
@@ -225,9 +224,9 @@ Pythonで生成AIの環境を構築する際に、仮想環境を作成するこ
 ```
 
 ![](/images/turtle-20240721-tripo-3dp/cmd_tripo_active.png =350x)
-*仮想環境アクティベート（有効化）*
+*仮想環境アクティベート*
 
-5. **ツールアップデート**
+6. **ツールアップデート (仮想環境)**
 コマンド入力し、仮想環境内のpip, wheel, setuptoolsのアップデートを行います。
 エラー表示なく、次の画面のようにsuccessfullyが表示されたら成功です。
 
@@ -238,7 +237,7 @@ py.exe -m pip install --upgrade pip wheel setuptools
 ![](/images/turtle-20240721-tripo-3dp/cmd_update_success.png =600x)
 *ツールアップデート成功*
 
-6. **pytorchインストール**
+7. **pytorchインストールコマンド取得**
 pytorchと呼ばれる機械学習ライブラリをインストールします。
 以下のPytorch.orgサイトにアクセスし、少し下にスクロールすると、環境の選択画面があります。
 この選択画面で、自身の環境に合わせてポチポチ選択します。
@@ -251,7 +250,7 @@ https://pytorch.org/get-started/locally/
 
 ::::message
 Tips
-:::details もし、Compute Platform（CUDAバージョン）が分からない場合（クリックで開く）
+:::details Compute Platform（CUDAバージョン）が分からない場合（クリックで開く）
 Compute Platformの項目で何を選択したらよいかわからない場合、次のコマンドを実行してください。
 ```
 nvidia-smi
@@ -260,7 +259,7 @@ nvidia-smi
 ![](/images/turtle-20240721-tripo-3dp/nvidiasmi_cmd.png =550x)
 *nvidia-smi コマンド実行画面*
 
-なお、Pytorchの選択画面にバージョン「12.3」はありませんが、12.3が表示された場合は「12.1」を選択することでうまくいきます。
+なお、Pytorchの選択画面にバージョン「12.3」はありませんが、12.3が表示された場合は「12.1」を選択します。
 :::
 
 :::details 以前のバージョンのPytorchをインストールしたい場合（クリックで開く）
@@ -278,26 +277,26 @@ https://pytorch.org/get-started/previous-versions/
 ```
 pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
 ```
-※ご自身の環境に応じて、適切なコマンドを選択してください。
+※ご自身の環境に合わせて、適切なコマンドを選択してください。
 なお、本記事執筆時点（2024年7月）においては、v2.3.1、v2.4.0で動作を確認しております。
 :::
 ::::
 
-7. **pytorchインストール（コマンド実行）**
-手順6でコピーしたコマンドをコマンドプロンプトに貼り付けて実行します。
+8. **pytorchインストールコマンド実行 (仮想環境)**
+手順7でコピーしたコマンドをコマンドプロンプトに貼り付けて実行します。
 エラー表示なく、次の画面のようにsuccessfullyが表示されたら成功です。
 
 ![](/images/turtle-20240721-tripo-3dp/pytorch_success.png =550x)
 *Pytorch コマンド実行画面*
 
-8. **環境変数設定**
+9. **環境変数設定 (仮想環境)**
 次のコマンドを実行して、環境変数を設定します。
 
 ```
 set DISTUTILS_USE_SDK=1
 ```
 
-8. **TripoSRのrequirements.txt書き換え**
+10. **TripoSRのrequirements.txt書き換え**
 TripoSRの環境構築に必要な依存モジュールを記した**requirements.txt**を書き換えます。
 具体的には、この中の「torchmcubes」というモジュールが、最新バージョンだとcmakeコンパイルに失敗するため、以前のバージョンを指定します。
 変更するファイルの場所は`<path>\TripoSR\requirements.txt`です。
@@ -316,8 +315,8 @@ TripoSRの環境構築に必要な依存モジュールを記した**requirement
 git+https://github.com/tatsy/torchmcubes.git@cbb3c3795b1e168bf81e8dee28623eaf5c33cd1c
 ```
 
-9. **TripoSRが必要なライブラリをインストール**
-次のコマンドを実行して、手順8で一部書き換えたrequirements.txt（要求ファイル）に基づき、TripoSRが必要なライブラリをインストールします。
+11. **TripoSRが必要なライブラリをインストール (仮想環境)**
+次のコマンドを実行して、手順10で一部書き換えたrequirements.txt（要求ファイル）に基づき、TripoSRが必要なライブラリをインストールします。
 
 ```
 pip install -r requirements.txt
@@ -328,17 +327,61 @@ pip install -r requirements.txt
 ![](/images/turtle-20240721-tripo-3dp/req_success.png =600x)
 *requirements.txt installコマンド実行画面*
 
-### ●Copilot
-画像生成にCopilotを使用する場合、Microsoft Edgeブラウザを開いて、検索欄の次のアイコンをクリックするだけで使用できます。
+12. **TripoSRの起動確認 (仮想環境)**
+コマンドを実行して、TripoSRアプリケーションを起動します。
+次の画面のように、Running on local URLが表示されたら成功です。
 
-![](/images/turtle-20240721-tripo-3dp/cop_icon.png =250x)
-*Copilotアイコン*
+```
+python gradio_app.py
+```
+
+![](/images/turtle-20240721-tripo-3dp/app_success.png =550x)
+*アプリケーション 起動成功*
+
+13. **TripoSRのWeb UI画面を起動**
+Webブラウザを開き、手順12の画面に表示された「Running on local URL」のアドレス「http://127.0.0.1:7860」をブラウザに入力します。次の画面がブラウザ上に表示されたら成功です。
+
+![](/images/turtle-20240721-tripo-3dp/webui.png =550x)
+*WebUI画面*
+
+14. **起動用バッチファイルの作成**
+次回からの起動を楽にするために、起動用のバッチファイルを作成します。次の内容を参考にファイルを作成したら、TripoSRのフォルダ直下（gradio_app.pyやrequirements.txtと同一階層）に保存します。このファイルのショートカットを作成して、デスクトップにでも置いておけば、以降ワンクリックで起動が可能になります👍
+※ バッチファイル実行後、すぐにブラウザが起動しますが、TripoSRアプリが起動していないため「ページに到達できません」が表示されると思います。その場合は、TripoSRアプリが起動するの待ってから、ブラウザを再度読み込んでください。
+
+
+```batch:tripo_run.bat（起動用バッチファイル）
+@echo off
+REM Move to TripoSR directory
+cd /d %~dp0
+
+REM Open URL in browser
+start http://127.0.0.1:7860
+
+REM Activate the virtual environment
+call .venv\Scripts\activate
+
+REM Run gradio_app.py
+python gradio_app.py
+
+REM Deactivate the virtual environment (if necessary)
+deactivate
+
+REM Prevent the command prompt from closing
+pause
+```
+
+以上で、TripoSRの導入方法の解説は終了です。
 
 ### ●AUTODESK Fusion
-OBJファイル→STLファイル変換にFusionを利用する場合、以下の公式サイトのページにアクセスします。まず「無償体験版をダウンロード」ボタンをクリックします。次のページが表示されたら「非商用（趣味利用版 機能限定 ）」を選択して、個人用Fusion360を入手ボタンをクリックし、以降は手順に従ってインストールを進めます。アカウント作成の作成が必要になりますので、作成してください。
+OBJファイル→STLファイル変換にAUTODESK Fusionを利用する場合、次の手順でインストールしてください。
+
+1. 次の公式サイトのページにアクセスします。
 
 https://www.autodesk.com/jp/products/fusion-360/overview?term=1-YEAR&tab=subscription
 
+2. 「無償体験版をダウンロード」ボタンをクリックします。
+3. 次のページが表示されたら「非商用（趣味利用版 機能限定 ）」を選択し「個人用Fusion360を入手」ボタンをクリックします。
+4. 以降は手順に従ってインストールを進めます。途中、アカウント作成の作成が必要になりますので作成してください。
 
 ## 実行手順
 
@@ -347,3 +390,9 @@ https://www.autodesk.com/jp/products/fusion-360/overview?term=1-YEAR&tab=subscri
 ### ○○する
 
 ### ○○する
+
+### ●Copilot
+画像生成にCopilotを使用する場合、Microsoft Edgeブラウザを開いて、検索欄の次のアイコンをクリックするだけで使用できます。
+
+![](/images/turtle-20240721-tripo-3dp/cop_icon.png =250x)
+*Copilotアイコン*
