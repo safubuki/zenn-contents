@@ -55,38 +55,47 @@ TripoSR使用時、下図のようにGPUメモリを消費します。8GBのGPU�
 
 ### ●Python
 
-以下の手順に従って、インストールを行ってください。
-
+::::message
+Python環境構築方法
+:::details Windows版Pythonのインストール手順（クリックで開く）
 1. **インストーラをダウンロード**
 以下の公式サイトにアクセスして、インストーラをダウンロードします。
 
-https://www.python.org/downloads/
+[![](/images/turtle-20240721-tripo-3dp/link_python.png)](https://www.python.org/downloads/)
 
-![](/images/turtle-20240721-tripo-3dp/python_1.png =500x)
+![](/images/turtle-20240721-tripo-3dp/python_1.png =550x)
 *インストーラのダウンロード*
 
 2. **Pythonインストール**
 インストーラを実行すると、次のような画面が表示されますので、画面下部のチェックボックス両方にチェック（※）を入れて「Install Now」をクリックしてください。インストールが完了したら「Close」ボタンで終了します。
 ※「***Add python.exe to PATH***」は、デフォルトでチェックが入っていないので、チェックを入れ忘れないよう注意してください。
 
-![](/images/turtle-20240721-tripo-3dp/python_2.png =500x)
+![](/images/turtle-20240721-tripo-3dp/python_2.png =550x)
 *Pythonインストーラ画面*
+:::
+::::
 
-### ●Git for Windows
+### ●Git
 
+::::message
+Git環境構築方法
+:::details Git for Windowsインストール手順（クリックで開く）
 以下の記事を参考に、インストールしてください。
 
-https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c
+[![](/images/turtle-20240721-tripo-3dp/link_git.png)](https://qiita.com/T-H9703EnAc/items/4fbe6593d42f9a844b1c)
+:::
+::::
 
-### ●Build Tools for Visual Studio
+### ●Build Tools
 
-以下の手順に従って、インストールを行ってください。
-
+::::message
+Build Tools（C++コンパイラ）環境構築方法
+:::details Build Tools for Visual Studioインストール手順（クリックで開く）
 1. **インストーラをダウンロード**
 以下の公式サイトにアクセスして、インストーラをダウンロードします。
 ※リンクをクリックすると目的の箇所にフォーカスします。
 
-https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2022
+[![](/images/turtle-20240721-tripo-3dp/link_msbuild.png)](https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2022)
 
 ![](/images/turtle-20240721-tripo-3dp/down_build_tool.png =600x)
 *インストーラのダウンロード*
@@ -97,11 +106,14 @@ https://visualstudio.microsoft.com/ja/downloads/#build-tools-for-visual-studio-2
 
 ![](/images/turtle-20240721-tripo-3dp/build_tool.png =600x)
 *Build Toolsインストーラ画面*
+:::
+::::
 
 ### ●CUDA Toolkit
 
-以下の手順に従って、インストールを行ってください。
-
+::::message
+CUDA 環境構築方法
+:::details CUDA Toolkitインストール手順（クリックで開く）
 1. **Toolkitが既にインストール済みか確認**
 次のコマンドを実行して、バージョンなどが表示されたら、Toolkitインストール済みのため、スキップしてください。
 
@@ -116,17 +128,10 @@ nvcc --version
 次の公式サイトにアクセスして、GPUドライババージョンに応じたToolkitをArchived Releasesの中から選択します。
 ※私の場合、GPUドライババージョン「546.01」にマッチする「CUDA Toolkit 12.3.0 (October 2023)」を選択しました。
 
-https://developer.nvidia.com/cuda-toolkit-archive
+[![](/images/turtle-20240721-tripo-3dp/link_cuda.png)](https://developer.nvidia.com/cuda-toolkit-archive)
 
-::::message
-Tips
-:::details GPUの型番にあったCUDAバージョンの選び方（クリックで開く）
-GPUの型番やGPUドライバのバージョンに応じて、適切なCUDAバージョンの選択方法について、次のページで解説されています。必要に応じて参照ください。
-
-https://zenn.dev/yumizz/articles/73d6c7d1085d2f
-※なお「Dockerイメージを用いたCUDA環境構築」については対象外です。
-:::
-::::
+※GPUの型番やGPUドライバのバージョンに応じて、適切なCUDAバージョンの選択方法について、次のページで解説されています。必要に応じて参照ください。なお、同ページ内の「Dockerイメージを用いたCUDA環境構築」については対象外とします。
+[![](/images/turtle-20240721-tripo-3dp/link_cuda_ver.png)](https://zenn.dev/yumizz/articles/73d6c7d1085d2f)
 
 3. **CUDA Toolkitのダウンロード②**
 選択すると、次のような画面が表示されるので、自身の環境に応じて選択し、ダウンロードします。
@@ -146,8 +151,9 @@ https://zenn.dev/yumizz/articles/73d6c7d1085d2f
 ```
 nvcc --version
 ```
-![](/images/turtle-20240721-tripo-3dp/nvcc_check.png =400x)
-*nvcc --versionコマンド実行（インストール成功）*
+
+:::
+::::
 
 ### ●TripoSR
 
@@ -373,8 +379,12 @@ pause
 以上で、TripoSRの導入方法の解説は終了です。
 
 ### ●AUTODESK Fusion
+
 OBJファイル→STLファイル変換にAUTODESK Fusionを利用する場合、次の手順でインストールしてください。
 
+::::message
+3D CADソフト環境構築
+:::details AUTODESK Fusionインストール手順（クリックで開く）
 1. 次の公式サイトのページにアクセスします。
 
 https://www.autodesk.com/jp/products/fusion-360/overview?term=1-YEAR&tab=subscription
@@ -382,6 +392,10 @@ https://www.autodesk.com/jp/products/fusion-360/overview?term=1-YEAR&tab=subscri
 2. 「無償体験版をダウンロード」ボタンをクリックします。
 3. 次のページが表示されたら「非商用（趣味利用版 機能限定 ）」を選択し「個人用Fusion360を入手」ボタンをクリックします。
 4. 以降は手順に従ってインストールを進めます。途中、アカウント作成の作成が必要になりますので作成してください。
+:::
+::::
+
+
 
 ## 実行手順
 
