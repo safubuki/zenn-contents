@@ -454,15 +454,17 @@ TripoSRは、ノイズとなるものが多い複雑な背景は失敗しやす�
 
 ### ●3Dモデル生成AI（TripoSR）
 
-TripoSRの基本的な使い方を示します。まず、環境構築時に作成した起動用バッチファイル「tripo_run.bat」を実行して、TripoSRを起動します。そして、起動後の3Dデータ生成までの手順を、gif動画で示します。
+#### TripoSRの使い方
+
+TripoSRの基本的な使い方を示します。まず、環境構築時に作成した起動用バッチファイル「tripo_run.bat」を実行して、TripoSRを起動します。起動後のアプリケーションの使い方は、gif動画で動きを交えながら解説します。
 
 ![](/images/turtle-20240721-tripo-3dp/tripo_use_gif.gif)
 *TripoSR 使い方 gif動画*
 
-3Dデータを生成したら、そのデータを保存します。次の画像の赤枠で囲った保存ボタンを押すことで、3Dデータ（OBJファイル）を保存することができます。
+#### 3Dデータ成功・失敗事例
 
-![](/images/turtle-20240721-tripo-3dp/tripo_use_down.png =550x)
-*TripoSR 3Dデータ保存*
+![](/images/turtle-20240721-tripo-3dp/tripo_result.jpg)
+*TripoSR 成功・失敗事例*
 
 ### ●3D CADソフト（Fusion）
 
