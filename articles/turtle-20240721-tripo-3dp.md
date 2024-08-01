@@ -3,7 +3,7 @@ title: "【TripoSR】驚きの技術！画像一枚から3Dプリンタでリア
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [AI,LLM,3d,3dプリンタ]
-published: false
+published: true
 ---
 生成AIを活用すると、一枚の画像から3Dプリンタでリアルな造形物を作成することができます！
 
