@@ -170,7 +170,11 @@ https://google.github.io/styleguide/
           "[python]": {
               "editor.insertSpaces": true,
               "editor.tabSize": 4,
-              "editor.formatOnType": true
+              "editor.defaultFormatter": "eeyore.yapf",
+              "editor.formatOnSave": true,
+              "editor.codeActionsOnSave": {
+                  "source.organizeImports": "explicit",
+              }
           },
           "pylint.args": [
               "--rcfile=C:\\Users\\{ユーザー名}\\AppData\\Roaming\\Code\\User\\pylintrc"
@@ -181,29 +185,38 @@ https://google.github.io/styleguide/
           ],
           "mypy-type-checker.args": [
               "--ignore-missing-imports",
+              "--follow-import=silent",
               "--check-untyped-defs"
-          ],
-          "editor.formatOnSave": true,
-          "editor.codeActionsOnSave": {
-              "source.organizeImports": "explicit"
-          }
+          ]
       }
       ```
       それぞれの設定項目の意味は次の通りです。
-      - "[**python**]"：python言語に対する設定です
-        - "**editor.insertSpaces**"：タブキーを押したときに、スペースを挿入します
-        - "**editor.tabSize**"：タブのサイズを 4 に設定します
-        - "**editor.formatOnType**"：コードを入力したとき、自動でフォーマットを整えます
-      - "**pylint.args**"：pylintの設定です
-      先ほどダウンロード・編集したpylintrcファイルを設定ファイルとして使います。
-      - "**yapf.args**"：yapfの設定です
-      Googleのスタイルガイドに基づき、コード幅を100 、インデント幅を4にします。
-      - "**mypy-type-checker.args**"：mypyの設定です
-        - "**--ignore-missing-imports**"：インポートしたモジュールの型情報がなくてもエラーにしない
-        - "**--check-untyped-defs**"：型注釈のない関数もチェックする
-      - "**editor.formatOnSave**"：ファイルを保存時、自動的にフォーマットを整えます
-      - "**editor.codeActionsOnSave**"：ファイルを保存時、自動的に実行するコードアクションを指定します
-        - "**source.organizeImports**"：ファイルの先頭にあるインポート文を整理します
+      - "[**python**]"**：python言語に対する設定**
+        - "**editor.insertSpaces**"：
+        タブキーを押したときに、スペースを挿入します
+        - "**editor.tabSize**"：
+        タブのサイズを 4スペース に設定します
+        - "**editor.defaultFormatter**"：
+        デフォルトのフォーマッタとして yapf を使用します
+        - "**editor.formatOnSave**"：
+        ファイルを保存する際に自動的にフォーマットを行います
+        - "**editor.codeActionsOnSave**"：
+        ファイルを保存する際にコードアクションを実行します
+          - "**source.organizeImports**"：
+          ファイルの先頭にあるインポート文を整理します
+      - "**pylint.args**"**：pylintの設定**
+      先ほどダウンロード・編集したpylintrcファイルを設定ファイルとして使います
+      - "**yapf.args**"**：yapfの設定**
+      Googleのスタイルガイドに基づき、コード幅を100 、インデント幅を4にします
+      - "**mypy-type-checker.args**"**：mypyの設定**
+        - "**--ignore-missing-imports**"：
+        インポートされたモジュールが見つからない場合でもエラーを無視します
+        ※ 外部ライブラリが存在しない場合でも型チェックを続行するために行います。
+        - "**--follow-import=silent**"：
+        インポートされたモジュールの型チェックを行わず、静かに無視します
+        ※ 型チェックのパフォーマンス向上のために行います。
+        - "**--check-untyped-defs**"：
+        型が明示されていない関数定義もチェックします
 
       :::message
       - pylint.argsの{**ユーザー名**}は、自身の環境にあわせて書き換えてください。
@@ -472,7 +485,7 @@ if __name__ == "__main__":
 
 このページを読んでくださった方が、少しでも**自信をもってコーディング**することができるようになった、あるいはその気持ちになっていただけたなら幸いです。最後までお付き合いくださり、ありがとうございました。
 
-## おまけ（私が自信を持ってコーディングした成果）
+## リンク
 
 私は、この記事に書いた方法で自信をもってコーディングできるようになりました👍
 そして、今年さらに一歩踏み出してOSSの開発にチャレンジして、GitHubに公開してみました。
@@ -489,3 +502,7 @@ https://github.com/safubuki/sd-webui-latent-regional-helper
 
 - **2024/03/02**
   ブレークタイム「Quick FixのFix using CopilotとExplain using Copilotとは？」の項目に私が書いたGitHub Copilotの記事のリンクを追加しました。
+
+- **2024/08/03**
+  ③ VSCodeの設定（Settings.json）の設定内容を見直し、説明文を追加修正しました。
+  「おまけ」という章タイトルを「リンク」に変更しました。
