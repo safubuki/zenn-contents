@@ -107,7 +107,7 @@ Visual Studio 環境構築方法
 :::
 ::::
 
-### ●CUDA Toolkit (12.4)
+### ●CUDA Toolkit (v12.4)
 
 ::::message
 CUDA 環境構築方法
@@ -158,7 +158,7 @@ nvcc --version
 Stable Fast 3Dについて、導入方法を詳細に解説します。
 
 1. **Hugging Faceでアクセストークンを作成**
-次のサイトで、アクセストークンと呼ばれるものを作成します。
+次のサイトで、アクセストークンを作成します。
 
 https://huggingface.co/settings/tokens
 　　Create new tokenボタンを選択し、トークン作成します。
@@ -191,7 +191,6 @@ https://huggingface.co/stabilityai/stable-fast-3d
 
 https://github.com/Stability-AI/stable-fast-3d
 　　Codeボタンを選択し、Download ZIPで任意の場所に保存後、展開します。
-
 
 ![](/images/turtle-20240803-stable-fast/git_sf3d.png =600x)
 *Stable Fast 3D GitHub*
@@ -376,7 +375,100 @@ pause
 
 お疲れさまでした！
 これで、全ての環境構築の説明が終わりました。
-引き続き、実行手順を参照して、実際の動作方法を理解してください。
+引き続き、環境構築時に発生したトラブルの対処方法を示したいと思います。
+
+## トラブル対処法
+
+この章ではトラブルの対処方法を示します。
+次に示すエラーは、いずれも`gradio_app.py`というUIを起動するプログラムを実行すると、依存するモジュールで発生します。もし、同様のエラーが発生したら以下の内容を参考にしてみてください。
+::::message alert
+トークン未設定・モデル利用未承認時に発生するエラー
+:::details raise GatedRepoError（クリックで開く）
+**[現象]**
+
+- GatedRepoError例外が発生。
+- config.yamlのあるレポジトリにアクセスできないというメッセージ。
+
+```
+File "C:\stable-fast-3d\.venv\lib\site-packages\huggingface_hub\utils\_errors.py", line 321, in hf_raise_for_status   
+    raise GatedRepoError(message, response) from e
+huggingface_hub.utils._errors.GatedRepoError: 401 Client Error. (Request ID: Root=1-66ada95b-5ac3648d7296503c4c9a0661;4caa2940-663f-468d-9e13-37cca9407329)
+
+Cannot access gated repo for url https://huggingface.co/stabilityai/stable-fast-3d/resolve/main/config.yaml.
+Access to model stabilityai/stable-fast-3d is restricted. You must be authenticated to access it.
+```
+
+**[原因]**
+
+- Hugging Faceのトークンを作成していない・作成に失敗した。
+- モデル利用の承認を行っていない。
+- Hugging Faceにトークンを利用してログインしていない。
+
+**[対処方法]**
+
+- 環境構築の手順1～手順4を見直し、トークン作成・設定及び、モデル利用承認を行う。
+- 環境構築の手順16～手順18を見直し、Hugging Faceにログインする。
+:::
+::::
+::::message alert
+Build Tools for Visual Studio 2022を利用時に発生するエラー
+:::details raise ValueError cl.exe not found
+**[現象]**
+
+- ValueError例外が発生。
+- cl.exeのインストールパスが見つからないというメッセージ。
+
+```
+File "C:\git_home\stable-fast-3d\.venv\lib\site-packages\slangtorch\slangtorch.py", line 74, in find_cl
+    raise ValueError(f"cl.exe not found in default Visual Studio installation path.\n"
+ValueError: cl.exe not found in default Visual Studio installation path.
+```
+
+**[原因]**
+
+- Build Tools for Visual Studio 2022だと、cl.exeあり、環境変数など設定してもcl.exeのインストールパスを見つけられないため。エラー発生の`slangtorch.py`に追加で、エラーログ仕込み、確かにpath取得できていないことを確認。
+※ コードの記述がやや環境に依存した書き方のように見受けられたが、詳細は未確認。
+
+```
+vswhere_path: C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe
+vs_install_path:
+cl_path: []
+```
+
+**[対処方法]**
+
+- Build Tools for Visual Studio 2022 をアンインストールする。
+- Visual Studio 2022 communityをインストールする。
+
+:::
+::::
+::::message alert
+CUDA Toolkitのバージョンが最新のVisual Studio非対応により発生するエラー
+:::details RuntimeError unsupported Microsoft Visual Studio version!
+**[現象]**
+
+- RuntimeError例外が発生。
+- CUDA ToolkitがMicrosoft Visual Studio のバージョン未サポートのメッセージ。
+
+```
+File "C:\git_home\stable-fast-3d\.venv\lib\site-packages\torch\utils\cpp_extension.py", line 2121, in _run_ninja_build
+    raise RuntimeError(message) from e
+RuntimeError: Error building extension '_slangtorch_texture_baker_44136fa355b3678a': [1/2] C:\Program Files\NVIDIA GPU Computing
+(省略)
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include\crt/host_config.h(164): fatal error C1189: #error:  -- unsupported Microsoft Visual Studio version! Only the versions between 2017 and 2022 (inclusive) are supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+```
+
+**[原因]**
+
+- CUDA v12.3が最新のVisual Studioに対応していないため。
+
+**[対処方法]**
+
+- CUDA toolkit v12.3をアンインストールする。
+- Nvidia ドライバーを更新する。
+- CUDA toolkit v12.4 Update 1をインストールする。
+:::
+::::
 
 ## 実行手順
 
