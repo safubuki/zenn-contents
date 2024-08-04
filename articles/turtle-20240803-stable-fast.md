@@ -17,7 +17,7 @@ https://ja.stability.ai/blog/introducing-stable-fast-3d
 
 ![](/images/turtle-20240803-stable-fast/sr3d_vs_tripo.jpg)
 
-進化がすごいと思いませんか？服やズボンの細かい表現、髪の毛の質感、豊かな表情。TripoSRでも十分驚きましたが、Stable Fast 3Dにはさらに驚かされました。この感動をぜひとも皆さまにお伝えしたく、この記事を作成しました。
+進化がすごいと思いませんか？服やズボンの細かい表現、髪の毛の質感、豊かな表情。TripoSRでも十分驚きましたが、Stable Fast 3Dにはさらに驚かされました。この感動をぜひとも皆さまにお伝えしたく、記事を作成しました。
 
 この記事を読んで、Stable Fast 3Dの凄さを体感してください👍
 
@@ -564,3 +564,8 @@ https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
 Stable Fast 3Dのベース技術であるTripoSRの記事です。TripoSRは少し古い技術になってしまいましたが、画像生成のコツや成功・失敗事例なども記載しています。参考になる部分もまだあると思いますので、読んでみてください。
 
 https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
+
+## 更新履歴
+
+- **2024/08/05**
+  文章の誤記を修正しました。
