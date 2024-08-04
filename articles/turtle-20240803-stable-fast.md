@@ -3,7 +3,7 @@ title: "【Stable Fast 3D】驚きの進化！画像一枚から素早くキレ�
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [AI,LLM,3d,3dプリンタ]
-published: false
+published: true
 ---
 技術の進化は凄いです！数日前、私は次のような記事を書きました。
 
