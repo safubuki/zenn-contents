@@ -158,6 +158,7 @@ Stable Fast 3Dについて、導入方法を詳細に解説します。
 
 1. **Hugging Faceでアクセストークンを作成**
 次のサイトで、アクセストークンを作成します。
+※ Hugging Faceへのログインが必要です。アカウントをお持ちでない方は、Sign Upしてアカウントを作成してください。
 
 https://huggingface.co/settings/tokens
 　　Create new tokenボタンを選択し、トークン作成します。
@@ -165,7 +166,7 @@ https://huggingface.co/settings/tokens
 ![](/images/turtle-20240803-stable-fast/token_create.png =300x)
 *トークン作成ボタン*
 
-2. **トークンのパーミッションを設定**
+1. **トークンのパーミッションを設定**
 次の画像のようにトークン名入力し、パーミッションを選択して、ページ下部にあるCreate tokenボタンを押します。
 
 ![](/images/turtle-20240803-stable-fast/token_select.png =600x)
