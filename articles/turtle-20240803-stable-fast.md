@@ -166,7 +166,7 @@ https://huggingface.co/settings/tokens
 ![](/images/turtle-20240803-stable-fast/token_create.png =300x)
 *トークン作成ボタン*
 
-1. **トークンのパーミッションを設定**
+2. **トークンのパーミッションを設定**
 次の画像のようにトークン名入力し、パーミッションを選択して、ページ下部にあるCreate tokenボタンを押します。
 
 ![](/images/turtle-20240803-stable-fast/token_select.png =600x)
