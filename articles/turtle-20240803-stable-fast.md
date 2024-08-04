@@ -460,11 +460,11 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include\crt/host_config
 
 **[原因]**
 
-- CUDA v12.3が最新のVisual Studioに対応していないため。
+- CUDA v12.3(古いバージョン)が最新のVisual Studioに対応していないため。
 
 **[対処方法]**
 
-- CUDA toolkit v12.3をアンインストールする。
+- CUDA toolkitの古いバージョン（この場合はv12.3）をアンインストールする。
 - Nvidia ドライバーを更新する。
 - CUDA toolkit v12.4 Update 1をインストールする。
 :::
