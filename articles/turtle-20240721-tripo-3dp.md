@@ -526,3 +526,12 @@ FusionによるOBJファイルからSTLファイルへの変換方法をgif動�
 私が書いた、GitHub CopilotというAIを利用したコーディングツールの記事もあります。プログラミングに興味がある方は、ぜひこちらの記事も読んでみてください。AIをうまく活用すると、モノづくりの速度が劇的に改善します。
 
 https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
+
+TripoSRの後継モデル「Stable Fast 3D」が2024年8月2日にリリースされました！TripoSRも十分に素晴らしい技術ですが、Stable Fast 3Dの出力品質の高さには驚かされます。早速記事にしてみましたので、その凄さをぜひ体感してみてください。
+
+https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
+
+## 更新履歴
+
+- **2024/08/04**
+  AI関連のStable Fast 3Dの記事を追加し、説明文を追加しました。
