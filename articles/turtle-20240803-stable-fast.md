@@ -284,35 +284,28 @@ Stable Fast 3Dでは、CUDA12.4の環境を準備して、上記選択画面で�
 手順11でコピーしたコマンドをPowerShellに貼り付けて実行します。
 エラー表示なく、successfullyが表示されたら成功です。
 
-13. **環境変数設定 (仮想環境)**
-次のコマンドを実行して、環境変数を設定します。
-
-```
-set DISTUTILS_USE_SDK=1
-```
-
-14. **Stable Fast 3Dが必要なライブラリをインストール (仮想環境)**
+13. **Stable Fast 3Dが必要なライブラリをインストール (仮想環境)**
 次のコマンドを実行して、Stable Fast 3Dが必要なライブラリをインストールします。エラー表示なく、successfullyが表示されたら成功です。
 
 ```
 pip install -r requirements.txt
 ```
 
-15. **Gradio demo(WebUI画面)が必要なライブラリをインストール (仮想環境)**
+14. **Gradio demo(WebUI画面)が必要なライブラリをインストール (仮想環境)**
 次のコマンドを実行して、Gradio demo(WebUI画面)が必要なライブラリをインストールします。エラー表示なく、successfullyが表示されたら成功です。
 
 ```
 pip install -r requirements-demo.txt
 ```
 
-16. **Hugging Face CLIをインストール**
+15. **Hugging Face CLIをインストール**
 次のコマンドを実行して、Hugging Face CLIをインストールします。
 
 ```
 pip install -U "huggingface_hub[cli]"
 ```
 
-17.  **アクセストークンを使ってHugging Faceにログイン① (仮想環境)**
+16.  **アクセストークンを使ってHugging Faceにログイン① (仮想環境)**
 次のコマンドを実行して、Pythonの対話モードにします。
 
 ```
@@ -324,14 +317,14 @@ from huggingface_hub import login
 login()
 ```
 
-18. **アクセストークンを使ってHugging Faceにログイン② (仮想環境)**
+17. **アクセストークンを使ってHugging Faceにログイン② (仮想環境)**
 次のような画面が表示されるので、Enter your token（入力非表示）に手順3でテキストに保存したトークンを貼り付け、Add token as git credential?で「Y」を入力します。内容に問題が無ければ、Login successfulが表示されます。Ctrl + zでPythonの対話モードから抜けます。
 
 ![](/images/turtle-20240803-stable-fast/hug_login.png)
 *Hugging Faceログイン*
 
 
-19.  **Stable Fast 3Dの起動確認 (仮想環境)**
+18.  **Stable Fast 3Dの起動確認 (仮想環境)**
 コマンドを実行して、Stable Fast 3Dアプリケーションを起動します。Running on local URLが表示されたら成功です。
 ※ PythonをUTF-8モードで動作するように環境変数を設定してから実行しないとエラーが出るため、次のコマンドを実行します。
 
@@ -339,13 +332,13 @@ login()
 $env:PYTHONUTF8 = "1"; python gradio_app.py
 ```
 
-20.  **Stable Fast 3DのWeb UI画面を起動**
-Webブラウザを開き、手順19の画面に表示された「Running on local URL」のアドレス「*http://127.0.0.1:7860*」をブラウザに入力します。次の画面がブラウザ上に表示されたら成功です。
+19.  **Stable Fast 3DのWeb UI画面を起動**
+Webブラウザを開き、手順18の画面に表示された「Running on local URL」のアドレス「*http://127.0.0.1:7860*」をブラウザに入力します。次の画面がブラウザ上に表示されたら成功です。
 
 ![](/images/turtle-20240803-stable-fast/webui.png =650x)
 *WebUI画面*
 
-21.  **起動用バッチファイルの作成**
+20.  **起動用バッチファイルの作成**
 次回からの起動を楽にするために、起動用のバッチファイルを作成します。以下の内容を参考にファイルを作成し、Stable Fast 3Dのフォルダ直下（`gradio_app.py`や`requirements.txt`と同じ階層）に保存してください。このファイルのショートカットを作成してデスクトップに置けば、ワンクリックで起動が可能になります👍
 **注意**： バッチファイル実行後、すぐにブラウザが起動しますが、Stable Fast 3Dアプリがまだ起動していないため「ページに到達できません」と表示されることがあります。その場合は、Stable Fast 3Dアプリが起動するのを待ってから、ブラウザを再度読み込んでください。
 
@@ -406,7 +399,7 @@ Access to model stabilityai/stable-fast-3d is restricted. You must be authentica
 **[対処方法]**
 
 - 環境構築の手順1～手順4を見直し、トークン作成・設定およびモデル利用承認を行う。
-- 環境構築の手順16～手順18を見直し、Hugging Faceにログインする。
+- 環境構築の手順15～手順17を見直し、Hugging Faceにログインする。
 :::
 ::::
 ::::message alert
@@ -569,3 +562,4 @@ https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
 
 - **2024/08/05**
   文章の誤記を修正しました。
+  不要な手順を削除しました。
