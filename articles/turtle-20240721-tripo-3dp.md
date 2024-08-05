@@ -293,14 +293,7 @@ pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https
 ![](/images/turtle-20240721-tripo-3dp/pytorch_success.png =550x)
 *Pytorch コマンド実行画面*
 
-9. **環境変数設定 (仮想環境)**
-次のコマンドを実行して、環境変数を設定します。
-
-```
-set DISTUTILS_USE_SDK=1
-```
-
-10. **TripoSRのrequirements.txt書き換え**
+9. **TripoSRのrequirements.txt書き換え**
 TripoSRの環境構築に必要な依存モジュールを記した**requirements.txt**を書き換えます。
 「torchmcubes」というモジュールが、最新バージョンだとcmakeコンパイルに失敗するため、以前のバージョンを指定します。
 変更するファイルの場所は`<path>\TripoSR\requirements.txt`です。
@@ -321,8 +314,8 @@ TripoSRの環境構築に必要な依存モジュールを記した**requirement
 git+https://github.com/tatsy/torchmcubes.git@cbb3c3795b1e168bf81e8dee28623eaf5c33cd1c
 ```
 
-11.   **TripoSRが必要なライブラリをインストール (仮想環境)**
-次のコマンドを実行して、手順10で一部書き換えたrequirements.txt（要求ファイル）に基づき、TripoSRが必要なライブラリをインストールします。
+10.   **TripoSRが必要なライブラリをインストール (仮想環境)**
+次のコマンドを実行して、手順9で一部書き換えたrequirements.txt（要求ファイル）に基づき、TripoSRが必要なライブラリをインストールします。
 
 ```
 pip install -r requirements.txt
@@ -355,7 +348,7 @@ pip install -r requirements.txt
 :::
 ::::
 
-12. **TripoSRの起動確認 (仮想環境)**
+11. **TripoSRの起動確認 (仮想環境)**
 コマンドを実行して、TripoSRアプリケーションを起動します。
 
 ```
@@ -367,13 +360,13 @@ python gradio_app.py
 ![](/images/turtle-20240721-tripo-3dp/app_success.png =550x)
 *アプリケーション 起動成功*
 
-13. **TripoSRのWeb UI画面を起動**
-Webブラウザを開き、手順12の画面に表示された「Running on local URL」のアドレス「*http://127.0.0.1:7860*」をブラウザに入力します。次の画面がブラウザ上に表示されたら成功です。
+12. **TripoSRのWeb UI画面を起動**
+Webブラウザを開き、手順11の画面に表示された「Running on local URL」のアドレス「*http://127.0.0.1:7860*」をブラウザに入力します。次の画面がブラウザ上に表示されたら成功です。
 
 ![](/images/turtle-20240721-tripo-3dp/webui.png =550x)
 *WebUI画面*
 
-14. **起動用バッチファイルの作成**
+13. **起動用バッチファイルの作成**
 次回からの起動を楽にするために、起動用のバッチファイルを作成します。以下の内容を参考にファイルを作成し、TripoSRのフォルダ直下（`gradio_app.py`や`requirements.txt`と同じ階層）に保存してください。このファイルのショートカットを作成してデスクトップに置けば、ワンクリックで起動が可能になります👍
 **注意**： バッチファイル実行後、すぐにブラウザが起動しますが、TripoSRアプリがまだ起動していないため「ページに到達できません」と表示されることがあります。その場合は、TripoSRアプリが起動するのを待ってから、ブラウザを再度読み込んでください。
 
@@ -560,3 +553,4 @@ https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
 
 - **2024/08/05**
   手順11にエラー時の対処法を追加しました。
+  不要な手順を削除しました。
