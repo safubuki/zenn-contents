@@ -542,7 +542,7 @@ FusionによるOBJファイルからSTLファイルへの変換方法をgif動�
 
 https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
 
-TripoSRの後継モデル「Stable Fast 3D」が2024年8月2日にリリースされました！TripoSRも十分に素晴らしい技術ですが、Stable Fast 3Dの出力品質の高さには驚かされます。早速記事にしてみましたので、その凄さをぜひ体感してみてください。
+TripoSRの後継モデル「Stable Fast 3D」が2024年8月2日にリリースされました！TripoSRも十分に素晴らしい技術ですが、Stable Fast 3Dの出力品質の高さには驚かされます。早速、使い方やStable Fast 3DとTripoSRの出力結果の比較などを記事にしましたので、ぜひ読んでその凄さを体感してみてください。
 
 https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
 
@@ -554,3 +554,6 @@ https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
 - **2024/08/05**
   手順11にエラー時の対処法を追加しました。
   不要な手順を削除しました。
+
+- **2024/08/06**
+　リンクのブログ紹介文を微修正しました。
