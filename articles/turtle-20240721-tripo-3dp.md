@@ -333,6 +333,28 @@ pip install -r requirements.txt
 ![](/images/turtle-20240721-tripo-3dp/req_success.png =600x)
 *requirements.txt installコマンド実行画面*
 
+::::message
+エラー時の対処法
+:::details ライブラリをインストール中にエラーが出た場合（クリックで開く）
+もしライブラリのインストール中にエラーが発生し、中断してしまった場合は、**x64 Native Tools Command Promptを利用して**、再度以下のコマンドを実行してください。
+
+![](/images/turtle-20240721-tripo-3dp/native_cmd.png =550x)
+*x64 Native Tools Command Prompt*
+
+**再度実行するコマンド**
+```
+.\.venv\Scripts\activate
+```
+```
+set DISTUTILS_USE_SDK=1
+```
+```
+pip install -r requirements.txt
+```
+※venv環境の構築、pip,wheel,setuptoolsのアップグレード、Pytorchのインストールは済んでいるため、再度実行は不要です。
+:::
+::::
+
 12. **TripoSRの起動確認 (仮想環境)**
 コマンドを実行して、TripoSRアプリケーションを起動します。
 
@@ -535,3 +557,6 @@ https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
 
 - **2024/08/04**
   AI関連のStable Fast 3Dの記事を追加し、説明文を追加しました。
+
+- **2024/08/05**
+  手順11にエラー時の対処法を追加しました。
