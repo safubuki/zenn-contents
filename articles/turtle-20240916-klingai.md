@@ -246,7 +246,7 @@ https://www.youtube.com/watch?v=uH8IIoh3IF4
 
 1. ベース画像の準備
 次のような学生がNo.1みたいなポーズをしている、いかにも学習塾っぽい画像を作成しました👆
-![](/images/turtle-20240916-klingai/snapshot.jpg)
+![](/images/turtle-20240916-klingai/Snapshot.jpg)
 *FLUX.1(anzu_flux)を利用して生成した画像*
 2. 動画のプロンプトとSetting
 生成動画用のプロンプトは、この時点では、何かを熱く語りながらそのまま腕を上にあげて、No.1ポーズみたいなのを想定して、次の内容を与えました。
