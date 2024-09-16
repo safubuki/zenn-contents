@@ -122,10 +122,10 @@ https://klingai.com/
 
 まず、利用にあたってはアカウントの作成が必要になります。
 
-1. [https://klingai.com/（公式サイト）](https://klingai.com/)にアクセスします。
-2. ホーム画面右上のSign Inをクリックします。
-3. Welcome to KLING AIのポップアップ画面が表示されるので、Sign up for freeをクリックします。
-4. あとは表示される内容に従って、必要事項を入力していけばアカウントを作成できます。
+1. [**https://klingai.com/（公式サイト）**](https://klingai.com/)**にアクセス**
+2. **ホーム画面右上のSign Inをクリック**
+3. **Welcome to KLING AIのポップアップ画面が表示されるので、Sign up for freeをクリック**
+4. **表示される内容に従って、必要事項を入力し、アカウントを作成**
 
 **●サブスクリプションへの加入**
 
@@ -133,12 +133,12 @@ https://klingai.com/
 
 一方で、月額サブスクリプションに加入するとこの状況は劇的に改善し、動画作成が数分で完了するようになります。たまに「Kling AIはサブスクに加入してもこの状況だったら嫌だな」という声をSNSで見かけますが、私の経験上は改善しています。初月は割引もあるため、まずは数百円払ってお試しのつもりで体験してみるのも良いと思います。
 
-1. ホーム画面右上にある「Subscription program」をクリックします。
-2. サブスクリプションのメニューが表示されるので、ポップアップ画面左上の「Monthly Saver」を選択します。
+1. **ホーム画面右上にある「Subscription program」をクリック**
+2. **サブスクリプションのメニューが表示されるので、ポップアップ画面左上の「Monthly Saver」を選択**
    ※本来は「Yearly Saver」が安いのですが、キャンペーン中は初月のみ〇% Offのような割引を「Monthly Saver」で行っています。1か月間はこちらでサブスクして、気に入ったら年間契約に切り替えるのも良いでしょう。
-3. いくつかプランが表示されるので、まずは「Standard」を選択します。
-4. プラン説明の下にある「Subscribe Special Offer」や「Subscribe Monthly」などのボタンをクリックします。
-5. 必要なクレジットカード情報などを入力して完了となります。
+3. **いくつかプランが表示されるので、まずは「Standard」を選択**
+4. **プラン説明の下にある「Subscribe Special Offer」や「Subscribe Monthly」などのボタンをクリック**
+5. **必要なクレジットカード情報などを入力して完了**
 
 ちなみに、Standardプランでは毎月660クレジットが付与される他に、毎日ログインボーナスとして当日限定（翌日繰越し不可）の66クレジットが付与されます。
 つまり、単純計算で 660クレジット + 66クレジット × 30日 = 2640クレジットが付与されることになります。
@@ -152,19 +152,20 @@ https://klingai.com/
 
 いよいよ動画を作成していきます。本当に簡単ですので、ご安心ください👍
 
-1. ホーム画面でAI Videosをクリックします。
+1. **ホーム画面でAI Videosをクリック**
 ![](/images/turtle-20240916-klingai/proc_01.png =400x)
 
-2. KLING Createve Space画面が開いたら、Image to Videoを選択します。
+2. **KLING Createve Space画面が開いたら、Image to Videoを選択**
 ![](/images/turtle-20240916-klingai/proc_02.png =400x)
 
-3. Image and Promptの項目にベースとなる画像と、動画に与えるプロンプト（指示文）を入力します。
+3. **Image and Promptの項目にベースとなる画像と、動画に与えるプロンプト（指示文）を入力**
 ![](/images/turtle-20240916-klingai/proc_03.png =400x)
    - プロンプトは入力しなくても動画作成は可能ですが、目的の動画を作成するのが難しくなるため、入力した方が良いです。
    - プロンプトは英語で入力します。
 
-4. Settingの項目を設定します。各設定項目の意味は次の通りです。
+4. **Settingの項目を設定**
 ![](/images/turtle-20240916-klingai/proc_04.png =400x)
+各設定項目の意味は次の通りです。
    - Creativity/Relevanceスライダー
      - Creativity：
      　AIが創造性豊かで自由な発想で動画を生成
@@ -179,17 +180,17 @@ https://klingai.com/
    　5秒/10秒、選択した長さの動画を生成
    - Number of Generations
    　一度に作成する動画の数を設定
-5. Generateボタンを押して動画を生成します。
+5. **Generateボタンを押して動画を生成**
 ![](/images/turtle-20240916-klingai/proc_05.png =400x)
    - 動画の生成は、数分程度で完了します。
    - Camera Movementは、Text to Videoの機能のため使用しません。
    - Negative Promptは、どうしても禁止したい要素があれば入力しても良いですが、基本は空欄で良いです。
 
-6. 作成が完了した動画を選択して、ダウンロードします。
+6. **作成が完了した動画を選択して、ダウンロード**
 ![](/images/turtle-20240916-klingai/proc_06.png =400x)
    - サブスクリプションに加入すると、ウォーターマーク（透かし）無しでダウンロードできます。
 
-7. 無事に動画が完成しました（動画再掲）。
+7. **無事に動画が完成（動画再掲）**
 
 https://www.youtube.com/watch?v=uH8IIoh3IF4
 
@@ -227,13 +228,13 @@ https://www.youtube.com/watch?v=uH8IIoh3IF4
 
 私は次のSettingを行って動画生成を行っています。もしよければ参考にしてください。
 
-- Creativity/Relevance
+- **Creativity/Relevance**
   基本は、0.5に設定して動画生成AIが生成する予想外の展開も少し楽しんでいます。プロンプトにある程度忠実にしたい場合は0.7～0.8に設定して、少し余白を残すようにしています。
-- Mode
+- **Mode**
   基本は、Professional Modeにしています。今まで生成した動画で満足度が高いのは、ほぼProfessional Modeで生成した動画です。サブスクがStandardプランなので、1日2～3個くらいのペースで生成すれば、デイリーボーナスを消費しつつ、適度にメンバーシップの660クレジットも少しずつ消費するかと思います。
-- Length
+- **Length**
 　基本は5秒ですが、ストーリー性がある動画を作成したいときは10秒にします。
-- Number of Generations
+- **Number of Generations**
 　基本は1です。
 
 以上で、AIによる動画生成の説明は終了です。お疲れさまでした🎉ここまでの内容を理解すれば、きっと目的の動画を作ることができるようになると思います。
@@ -244,11 +245,11 @@ https://www.youtube.com/watch?v=uH8IIoh3IF4
 生成した動画の活用例を紹介します。静止画が動画として動き出すだけでも十分に楽しいのですが、せっかくですので、その作成した動画を用いてさらに面白いことができないかと考えてみました。
 そこで思いついたのが、学習塾のCMのような動画を作ってみることでした。
 
-1. ベース画像の準備
+1. **ベース画像の準備**
 次のような学生がNo.1みたいなポーズをしている、いかにも学習塾っぽい画像を作成しました👆
 ![](/images/turtle-20240916-klingai/Snapshot.jpg)
 *FLUX.1(anzu_flux)を利用して生成した画像*
-2. 動画のプロンプトとSetting
+2. **動画のプロンプトとSetting**
 生成動画用のプロンプトは、この時点では、何かを熱く語りながらそのまま腕を上にあげて、No.1ポーズみたいなのを想定して、次の内容を与えました。
 また、動画の設定はCreativity/Relevance「0.5」、Mode「Professional Mode」、Length「5s」としました。
 ```text:ポーズを決める女子高生（日本語）
@@ -260,9 +261,9 @@ English:
 This is a high school girl talking very much in a busy classroom. 
 The high school girl thrusts one hand upwards and strikes a victorious pose.
 ```
-3. BGMの用意
+3. **BGMの用意**
 BGMもAIで生成したら面白かったのですが、今回はYouTubeオーディオライブラリから取得しました。こちらの音源であれば、YouTubeで使う分にはライセンスの心配が無いため安心です。
-4. 動画編集ソフトで編集
+4. **動画編集ソフトで編集**
 動画はこのような形で編集ソフトを使って仕上げていきます。
 ![](/images/turtle-20240916-klingai/editor.png)
 *動画編集画面*
@@ -275,7 +276,7 @@ https://jp.cyberlink.com/products/powerdirector-video-editing-software/overview_
 
 https://www.openshot.org/ja/
 
-5. CMの完成
+5. **CMの完成**
 そして、完成したのがこちらの動画です。若干、AIが生成した動画に寄せている感はありますが、無事完成させることができました。ちなみに最後に出てくる企業ロゴ風のマークも生成AIで作成しています。
 
 https://www.youtube.com/watch?v=bUBMZH-UmFY
