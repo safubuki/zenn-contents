@@ -578,6 +578,10 @@ TripoSRの後継モデル「Stable Fast 3D」が2024年8月2日にリリース�
 
 https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
 
+画像1枚から動画を生成するAIツール『Kling AI』の使い方やコツを紹介します。さらに、CM風の動画を作成することで、実際のシーンでの活用例も示しました。うまく融合させれば、モノづくりとプロモーションが画像1枚から可能になります♪
+
+https://zenn.dev/safubuki/articles/turtle-20240916-klingai
+
 ## 更新履歴
 
 - **2024/08/04**
@@ -588,7 +592,10 @@ https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
   不要な手順を削除しました。
 
 - **2024/08/06**
-　リンクのブログ紹介文を微修正しました。
+  リンクのブログ紹介文を微修正しました。
 
 - **2024/08/07**
   Python仮想環境アクティベート時のエラー対処方法を追加しました。
+
+- **2024/09/17**
+  AI関連の動作生成AIツール『Kling AI』の記事をリンクに追加しました。
