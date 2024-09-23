@@ -460,4 +460,4 @@ https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
   動画サンプル集を追加しました。
 
 - **2024/09/24**
-  YouTube Studio オーディオライブラリの説明を追加しました。
+  YouTube Studio オーディオライブラリの説明を、動画サンプル集の説明文に追加しました。
