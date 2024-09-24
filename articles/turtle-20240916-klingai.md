@@ -290,14 +290,6 @@ https://www.youtube.com/watch?v=7DbIfF9zrFg
 ![](/images/turtle-20240916-klingai/extend.png =350x)
 *動画の長さ拡張*
 
-## AIが生成した動画の見分け方
-
-
-以上で全ての説明が完了しました。
-今回も、本当にお疲れさまでした🎉
-
-
-
 ## まとめ
 
 動画生成AI「**Kling AI**」を用いた一連の動画の作り方から、サンプルCMを作成する活用例を示すことができました。
