@@ -354,6 +354,8 @@ https://zenn.dev/safubuki/articles/turtle-20240916-klingai
 
 ## リンク
 
+私が書いたAI関連ツールの記事のリンクを紹介します。興味があればぜひご覧ください。
+
 私が書いた、GitHub CopilotというAIを利用したコーディングツールに関する記事です。プログラミングに興味がある方は、ぜひこちらの記事も読んでみてください。AIをうまく活用し、Copilotでコードの中身を、Tripoで3Dデータの外側を生成するなどと分業させると、モノづくりの速度が劇的に改善するのではと思っています。
 
 https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
@@ -361,3 +363,12 @@ https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
 画像1枚から動画を生成するAIツール『Kling AI』の使い方やコツを紹介します。さらに、CM風の動画を作成することで、実際のシーンでの活用例も示しました。うまく融合させれば、モノづくりとプロモーションが画像1枚から可能になりそうです。
 
 https://zenn.dev/safubuki/articles/turtle-20240916-klingai
+
+TripoSRがリリースされたのは2024年3月頃でしたが、そこから約半年で劇的に進化しました。技術の変遷を確認する意味でも、読んでみると良いかもしれません。3Dプリントも絡めつつ、3Dモデル作成における画像生成のコツや成功・失敗事例なども記載しており、楽しんでいただけると思います。
+
+https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
+
+## 更新履歴
+
+- **2024/09/30**
+  TripoSRリンク及び、説明文をリンク欄にも追加しました。
