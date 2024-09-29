@@ -294,8 +294,8 @@ Stylize（スタイライズ）は、3Dデータの様式を変更する面白�
 
 https://zenn.dev/safubuki/articles/turtle-20240916-klingai
 
-![](/images/turtle-20240929-tripo2-evo/turtle_study.jpg)
-*Kling AIのブログ記事で活躍した女性*
+![](/images/turtle-20240929-tripo2-evo/turtle_study.jpg =450x)
+*ブログで利用したサンプル画像*
 
 この画像を3Dデータにした結果は次の通りです。一見すると失敗しているように見えますが、いくつか驚くべきポイントがあります。
 
@@ -314,8 +314,8 @@ https://zenn.dev/safubuki/articles/turtle-20240916-klingai
 
 人物の全身画像をどこまで正確に3Dデータにできるか、そして3Dプリンタでの印刷に耐えられるかを検証してみました。検証に使う画像は3Dデータ生成しやすいよう、ややデフォルメしてカートゥーン調にしました。以前のTripoでもかなりデフォルメした画像であれば、3Dデータ生成やプリントはうまくいっていましたが、今回はその時よりもリアルさを増し、構成要素も複雑にしました。
 
-![](/images/turtle-20240929-tripo2-evo/stand_knight.jpg =350x)
-*甲冑女性（ライフル銃所持）*
+![](/images/turtle-20240929-tripo2-evo/stand_knight.jpg =300x)
+*甲冑女性のカートゥーンデフォルメ画像*
 
 この画像を3Dデータにした結果は次の通りです。機能説明で何度も取り上げたのでややネタバレ感がありますが、優秀な出力結果だと思います。
 
@@ -372,3 +372,4 @@ https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
 
 - **2024/09/30**
   TripoSRリンク及び、説明文をリンク欄にも追加しました。
+  一部画像のサイズを調整
