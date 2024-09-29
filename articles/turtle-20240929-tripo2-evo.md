@@ -3,7 +3,7 @@ title: "『Tripo 2.0』で劇的に変わるAIと3Dデータ生成！豊富な�
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [AI,LLM,3d,3dプリンタ,tripo]
-published: false
+published: true
 ---
 以前、私のブログで「**Tripo**」というAIツールをご紹介しました。このツールは、たった1枚の画像から3Dデータを作成することができます。
 
