@@ -540,6 +540,9 @@ GitHub Copilotを使ってみたい、これなら使えそうだ！と思って
 
 これら記事では、たった一枚の画像からAIを活用して、3Dプリンタでリアルな造形物を作成する技術を紹介しています。外側のリアルな部分はリンク先の記事の内容で、内側のソフトウェアはGitHub Copilotを使って開発することで、近い将来、AIだけで家電のようなモノづくりができるかもしれません。そんな未来に興味がある方は、ぜひ記事を読んでみてください👍
 
+**Tripo 2.0**は、TripoSRの後継モデルで、劇的に精度が向上しました。モノづくり、ゲーム、VRなど幅広い分野に広がりそうな勢いを感じました。進化が止まりません！
+https://zenn.dev/safubuki/articles/turtle-20240929-tripo2-evo
+
 **Stable Fast 3D**は、TripoSRの後継モデルで、さらに素早くキレイな3Dデータを生成できるようになりました。AIの世界は進化がすごいです。
 https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
 
@@ -559,3 +562,6 @@ https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
 
 - **2024/08/04**
   AI関連のStable Fast 3Dの記事を追加し、説明文を追加修正しました。
+
+- **2024/09/30**
+  Tripo 2.0リンク及び、説明文を追加しました。
