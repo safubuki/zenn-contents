@@ -429,17 +429,21 @@ https://www.youtube.com/watch?v=AmLY3eCWgrs
 
 ## リンク
 
-私が書いたAI関連の記事のリンクを示します。もし興味があれば見てみてください。
+私が書いたAI関連の記事のリンクを紹介します。興味があればぜひご覧ください。
 
-TripoSRというAIで3Dモデルを生成する技術の記事です。3Dモデル作成における画像生成のコツや成功・失敗事例なども記載しています。
+Tripo 2.0というAIで3Dモデルを生成する技術に関する記事です。下の記事のTripoSR後継モデルで、精度が劇的に向上しています。モノづくり、動画、VRなど幅広い分野に応用できる可能性があります。現在は未実装ですが、3Dワールドの生成やヒューマノイドモデルを自在に動かして動画を作成する機能もリリース予定とのことで、今後の展開が非常に楽しみです。
+
+https://zenn.dev/safubuki/articles/turtle-20240929-tripo2-evo
+
+上記のTripo 2.0の元となったAIで3Dモデルを生成する技術に関する記事です。ローカル環境ではいくらでも生成できるため、全くメリットが無くなったわけではありません。技術の変遷を確認する意味でも、読んでみると良いかもしれません。3Dモデル作成における画像生成のコツや成功・失敗事例なども記載しており、楽しんでいただけると思います。
 
 https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
 
-TripoSRの後継モデル「Stable Fast 3D」の記事です。Stable Fast 3Dは3Dモデルの出力品質が向上しました。使い方やStable Fast 3DとTripoSRの出力結果の比較など、興味深い内容多数です。
+TripoSRの後継モデル「Stable Fast 3D」に関する記事です。Stable Fast 3Dは、Tripo AI社と提携しているStability AI社がリリースし、3Dモデルの出力品質が向上しました。使い方やStable Fast 3DとTripoSRの出力結果の比較など、興味深い内容が多数含まれています。TripoSR、Stable Fast 3D、そしてTripo 2.0の順でリリースされました。
 
 https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
 
-GitHub CopilotというAIを利用したコーディングツールの記事です。プログラミングに興味がある方は、ぜひこちらの記事も読んでみてください。AIをうまく活用すると、モノづくりの速度が劇的に改善します。
+GitHub CopilotというAIを利用したコーディングツールの記事です。プログラミングに興味がある方は、ぜひこちらの記事も読んでみてください。AIをうまく活用すると、モノづくりの速度が改善します。
 
 https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
 
@@ -459,3 +463,8 @@ https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
 
 - **2024/09/28**
   動画サンプル集に動画を追加しました。
+
+- **2024/09/30**
+  Tripo 2.0リンク及び、説明文を追加しました。
+  TripoSRの記事紹介文の内容を見直しました。
+  Stable Fast 3Dの記事紹介文の内容を見直しました。
