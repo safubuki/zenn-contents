@@ -380,7 +380,7 @@ https://www.tripo3d.ai/
 
 画像生成AIについては、DALL-E3、Flux1、ImageFXを比較した結果、掃除機や掃除用具の品質が高かったGoogleのImageFXを選択しました。
 
-![](/images/turtle-20240929-tripo2-evo/image_fx.png =500x)
+![](/images/turtle-20240929-tripo2-evo/image_fx_input.png =500x)
 *ImageFXの画面*
 
 一例として、この画像を作るためには次のようなプロンプトを用意しました。
