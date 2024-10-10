@@ -352,6 +352,110 @@ https://zenn.dev/safubuki/articles/turtle-20240916-klingai
 このブログの内容が、読んでくださった方のお役に立てたなら幸いです。
 最後まで読んでいただき、ありがとうございました。
 
+## 付録
+
+付録では、ブログ記事を書いた後にさらに付け足したい内容を書きます。お時間があれば、ぜひご覧ください。
+
+### コンテスト
+
+「2024/10/08 - 2024/10/22」の期間中に、次のようなコンテストが開催されています。簡単に説明すると、Tripoを利用して独創的な「チェスの駒」を作るという内容です。
+
+![](/images/turtle-20240929-tripo2-evo/contest.png =500x)
+*contest案内*
+
+私も1ユーザーとして早速応募してみました。家電が好きなので、掃除機や掃除をテーマにしました。タイトルページの下部に並んでいるものが、Tripoで生成した3Dデータです。公式サイトに行くと、あらゆる角度から確認できますので、チェックしてみてください。
+
+![](/images/turtle-20240929-tripo2-evo/chess_title.jpg)
+*応募作品のタイトルページ*
+
+公式サイトにアクセスするとトップページにイベントへのリンクが表示されます。画面上部のEventタブからもアクセスできます。
+
+https://www.tripo3d.ai/
+
+今回のイベントに限らず、今後も似たような形式でコンテストが定期的に開催される可能性が高いです。また、このようなお題に取り組むことで、コツを早くつかむことができます。解説していきますので、楽しみながらチャレンジしてみてください。
+
+#### ●インプット画像作成
+
+インプット画像の作成について、どのサービス選択し、どのように目的の画像を生成したかを解説します。
+
+画像生成AIについては、DALL-E3、Flux1、ImageFXを比較した結果、掃除機や掃除用具の品質が高かったGoogleのImageFXを選択しました。
+
+![](/images/turtle-20240929-tripo2-evo/image_fx.png =500x)
+*ImageFXの画面*
+
+一例として、この画像を作るためには次のようなプロンプトを用意しました。
+※プロンプトはスペースをとるため、折りたたみ表示にしています。
+
+:::details ナイト掃除機のプロンプト（クリックして開く）
+```text:ナイト掃除機のプロンプト
+英語プロンプト：
+Create a chess piece in a vacuum cleaner consisting of a main unit and a hose.
+White background.
+Design chess piece s with a vacuum cleaner consisting of a main unit and a hose as the main object.
+The design should be easily recognisable as a vacuum cleaner consisting of a main unit and a hose.
+The vacuum cleaner , consisting of the main unit and the hose , is the star of the game.
+The vacuum cleaner should be suitable for a knight and should be designed like a piece of iron armour to represent strength.
+Underneath the vacuum cleaner , which consists of the body and hose , is a circular base.
+The circular pedestal is made of plain wood like flooring, slightly thicker in size and does not interfere with the design of the vacuum cleaner.
+The vacuum cleaner should be the main focus and the pedestal should not be too large.
+The pieces are realistic 3DCG and the images are photorealistic.
+---
+日本語訳：
+本体とホースで構成された掃除機でチェスの駒を作ります。
+白い背景です。
+本体とホースで構成された掃除機をメインにチェスの駒をデザインしてください。
+本体とホースで構成された掃除機であることが一目でわかるデザインにしてください。
+本体とホースで構成された掃除機が主役です。
+掃除機はナイトのように、強さを表現するために鉄の甲冑のようなデザインです。
+本体とホースで構成された掃除機の下には円形の台座がある。
+円形の台座はフローリングのような無地の木材でできており、サイズはやや厚めで、掃除機のデザインを邪魔しません。
+掃除機が主役なので、台座は大きすぎない方がよいです。
+作品はリアルな3DCGで、画像は写実的です。
+```
+- AIが期待する結果を生成しないときは、同じ文章で繰り返してみる、邪魔している文言がないかを確認するなどを行ってください。
+:::
+
+また、今回のように「駒のメイン部分 + 台座部分」のように複数の要素からなる画像を生成する場合、「駒の部分は良いのに、台座の生成がイマイチだなぁ...」ということがあると思います。そのような場合は、編集モードでの部分生成が便利です。次のように台座の部分だけを選択して、再生成することが可能です。必要に応じて活用してみてください。
+
+![](/images/turtle-20240929-tripo2-evo/image_fx_parts.png =500x)
+*ImageFXの編集モード画面*
+
+ちなみに、目的の画像はなかなかできるものではなく、今回私は初めてImageFXの1日上限まで使い切りました。1、2回だけやって「AIはダメだなぁ。言うことを聞かないなぁ。」とあきらめるのではなく、根気強くやることが大切です。
+
+![](/images/turtle-20240929-tripo2-evo/image_fx_never.png)
+*多数の生成試行実施（一部抜粋）*
+
+画像ができたら「1枚の画像で3Dデータを生成」の章で確認した手順に従って、3Dデータを作成します。Tripoによる3Dデータ出力結果がイマイチということありますが、これは複数回試行しても結果は大きく変わりませんから、インプット画像を差し替えるのが良いかと思います。
+
+また、イベント期間中は「**Free Retry**」が通常時よりも多くできるように感じます（気のせいかもしれませんが）。Free Retryで2～3回再生成できますので、それで確認するのも良いと思います。
+
+#### ●応募方法
+
+応募は、その回ごとのルールをよく確認してください。
+まず「Submit Here」のような投稿ボタンを探します。
+
+![](/images/turtle-20240929-tripo2-evo/submit.png)
+*submitボタン*
+
+このボタンを押すと、必要事項の入力画面が表示されるので、適宜入力していきます。カバーイメージは簡易的なものでも良いですが、少しキレイなものを用意すると世界観などを伝えやすくなります。
+
+![](/images/turtle-20240929-tripo2-evo/submit_input_01.png)
+*submit 入力画面1*
+
+続いて、各駒を登録しますが、私はここで少し戸惑いました。このURL入力欄には何を入れたら良いのだろうと。
+
+![](/images/turtle-20240929-tripo2-evo/submit_input_02.png)
+*submit 入力画面2*
+
+ここについては、3Dデータの編集画面の赤枠で囲ったリンク共有ボタンを押すことで入手可能です。このURLを先ほどのSubmit入力画面2に入力します。
+
+![](/images/turtle-20240929-tripo2-evo/submit_input_url.png)
+*submit リンク共有ボタン*
+
+赤い*マークがついていない項目は、通常時は利用しないので無視して構いません。あとは利用規約をよく読み、同意チェックをした上で提出してください。提出すると、3Dデータは共有され、誰でもアクセス可能になります。
+
+以上で説明は終了です。ぜひイベントにチャレンジして、楽しみながらコツを掴んでください。
+
 ## リンク
 
 私が書いたAI関連ツールの記事のリンクを紹介します。興味があればぜひご覧ください。
@@ -373,3 +477,6 @@ https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
 - **2024/09/30**
   TripoSRリンク及び、説明文をリンク欄にも追加しました。
   一部画像のサイズを調整
+
+- **2024/10/11**
+  コンテストについて「付録」の章に追加しました。
