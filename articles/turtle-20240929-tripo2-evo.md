@@ -460,7 +460,7 @@ The pieces are realistic 3DCG and the images are photorealistic.
 
 私はセブンティーンアイス（特にカラフルチョコ）が大好きです！3Dデータにしてみたところ、想像以上にセブンティーンアイスだったので、嬉しくなってこのようなものを作成しました。
 
-![](/images/turtle-20240929-tripo2-evo/17ice.PNG)
+![](/images/turtle-20240929-tripo2-evo/17ice.png)
 *セブンティーンアイスの楽しみ方*
 
 元となったのは、駐車場の車の中で何気なく撮った1枚の写真です。この写真を見ると、アイスの上部が少し欠けているのですが、それもTripoは見逃さず、非常に高い再現性です。
