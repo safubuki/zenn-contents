@@ -333,7 +333,7 @@ pyファイルの中でインラインチャットが呼び出され、指示を
 まずは、「使い方の基本」で紹介した機能を、自然な言葉で試してみてください。そして、これらの基本機能に慣れてきたら、次に示す「便利な使い方」にも挑戦してみてください。より効率的に、目的に応じた使い方ができるようになります。
 
 - ショートカットキー
-- パーティシパンツ（Participants）
+- チャットパーティシパンツ（Chat Participants）
 - スラッシュコマンド（Slash Commands）
 - コンテキスト変数（Context Variables）
 - AIモデルの選択
@@ -356,15 +356,16 @@ GitHub Copilotでは、次のショートカットキーを使うことができ
 (参考URL) [GitHub Copilot の概要 (公式)](https://docs.github.com/ja/copilot/using-github-copilot/getting-started-with-github-copilot)
 (※) 「次/前の提案を表示する」は、環境により動作しない可能性があります。
 
-### パーティシパンツ（Participants）
+### チャットパーティシパンツ（Chat Participants）
 
-パーティシパンツは、日本語では「参加者」と訳されます。解説サイトによっては、エージェントと呼ばれることもあります。チャット欄に`@workspace`や`@terminal`のようなタグを入力し、その後に続く指示を行うことで、ワークスペースやターミナルなど特定の内容について質問を行うことができます。このタグ付けを行うことで、質問の範囲を広げ、より良い回答を得ることができます。
+チャットパーティシパンツは、日本語では「チャット参加者」と訳されます。解説サイトによっては、エージェントと呼ばれることもあります。チャット欄に`@workspace`や`@terminal`のようなタグを入力し、その後に続く指示を行うことで、ワークスペースやターミナルなど特定の内容について質問を行うことができます。このタグ付けを行うことで、質問の範囲を広げ、より良い回答を得ることができます。
 
-※ なお「Participants」という表記は、VSCode拡張機能「GitHub Copilot Chat」の説明に基づいています。
+※「Chat participants」という表記は、GitHub DocsやVSCode拡張機能「GitHub Copilot Chat」の説明に基づいています。
+(参考URL) [GitHub Docs - Chat participants (公式)](https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide#chat-participants)
 
 #### タグ一覧
 
-パーティシパンツのタグ一覧を示します。
+チャットパーティシパンツのタグ一覧を示します。
 
 | 変数名        | 内容                              | よく使う(★) |
 |------------|---------------------------------|---------|
@@ -697,7 +698,7 @@ https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
   - チャット機能の起動方法や表示位置について記載
   - チャット機能のgif動画を更新
   - 便利な使い方の章を追加して、コンテキスト変数などを移動
-  - パーティシパンツ（Participants）章を新規追加
+  - チャットパーティシパンツ（Chat Participants）章を新規追加
   - コンテキスト変数の#fileにファイルをアタッチする機能を新規追加
   - コンテキスト変数#codebaseを追加更新
   - AIモデルの選択を新規追加
