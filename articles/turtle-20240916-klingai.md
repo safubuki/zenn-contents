@@ -35,7 +35,7 @@ https://www.youtube.com/watch?v=e9NK0dW7yf0
 このブログは、次の6つの大きな章からなります。各章の概要については、次の図をご覧ください。
 
 ![](/images/turtle-20240916-klingai/blog_struct.png)
-*ブログの構成（クリックで拡大）*
+*ブログの構成*
 
 ## インプット画像の作成
 
