@@ -537,7 +537,7 @@ https://www.youtube.com/watch?v=BQ0AT1E7vCM
 - BGM（音楽AI）: Filmora Generative Music
 - 字幕英訳：Copilot(GPT4)/ChatGPT/Gemini
 
-さらに、タートルビレッジという観光ガイドビデオ作成しました。一見すると村の紹介動画ですが、予想外の展開を楽しんでいただけると思います。前作(The Secret of Turtle Red Eye)との関連も・・。
+さらに、タートルビレッジという小さな村の観光ガイドビデオを作成しました。一見すると村の紹介動画ですが、予想外の展開を楽しんでいただけると思います。前作(The Secret of Turtle Red Eye)との関連も・・。
 
 https://www.youtube.com/watch?v=l3qHAIK-fy4
 
