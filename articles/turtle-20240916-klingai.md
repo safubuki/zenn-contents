@@ -528,7 +528,7 @@ https://www.youtube.com/watch?v=fYUqur4M_V4
 - BoomBoom
   - まるで風船のように膨らみ、膨張します。
 
-以下に、「Fuzzy Fuzzy」で生成した動画の一例を示します。
+以下に、「FuzzyFuzzy」で生成した動画の一例を示します。
 
 https://www.youtube.com/watch?v=262xnKkywbE
 
@@ -536,11 +536,16 @@ https://www.youtube.com/watch?v=262xnKkywbE
 
 最大4枚の画像をアップロードすることで、それらを動画の構成要素としてAIに認識させることができる機能です。
 例えば、キャラクターや背景などの画像をアップロードし、テキストプロンプトで動きや関係性を指示することで、AIがこれらの要素を取り入れた動画を生成します。
+まずは少ない枚数から試してみるのがおすすめです。また、使用する画像もその画像が何を表現しているか、AIが認識しやすいものを使用すると良さそうです。
 
 ![](/images/turtle-20240916-klingai/elements.png =300x)
 *Elementsの選択*
 
-まだ私も十分に使いこなせておりませんが、キャラクターの見た目を一貫させたり、複数の要素を自然に動かしたりする際に活用できるようです。
+以下に、「Elements」で生成した動画の一例を示します。
+
+Elementsの選択で示した、2つの画像を用意して、「Retro-style female reporters introduce retro streetscapes of Japan.」というシンプルなプロンプトを入力します。
+
+https://www.youtube.com/watch?v=PXxSydniP2A
 
 以上で、Kling AIアップデートの説明は終わりです。
 
