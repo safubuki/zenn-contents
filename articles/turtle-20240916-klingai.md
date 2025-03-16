@@ -547,7 +547,7 @@ Elementsの選択で示した、2つの画像を用意して、「Retro-style fe
 
 https://www.youtube.com/watch?v=PXxSydniP2A
 
-以上で、Kling AIアップデートの説明は終わりです。
+以上で、Kling AIの機能詳細の説明は終わりです。
 
 ## 動画サンプル集
 
@@ -678,7 +678,7 @@ https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
   - コミュニティ機能について、最新のUIに追従しました。
   - コミュニティ機能について、NGになる事例を追加しました。
   - Effects機能について、手順及びFuzzyFuzzyの参考動画を追加しました。
-  - Elements機能について、手順を追加しました。※作成例は無し。
+  - Elements機能について、手順を追加しました。
   - 動画サンプル集に、効果音追加パターンと音声追加パターンを追加しました。
   - 特典映像にTurtle Circleという1分の動画を追加しました。
 
