@@ -6,8 +6,13 @@ topics: [ai,生成ai,動画,動画生成]
 published: true
 ---
 :::message
-**ブログ大幅アップデート！（2025年3月16日）**
+**ブログ大幅アップデート1！（2025年3月16日）**
 前回のブログ更新（2024年11月）から、Kling AIサービス内容が大きく変わり、新たな機能も多数追加されています。ぜひ改めて最新の内容をご確認ください。
+:::
+
+:::message
+**ブログ大幅アップデート2！（2025年3月28日）**
+更新して安心していたら、なんと Kling AI のユーザーインタフェースが大幅に更新されました！私個人は使いやすくなったと思いますが、初めての方や以前のインタフェースに慣れた方は、戸惑われると思いましたので、説明画像をすべて刷新しました👍️
 :::
 
 私は、検索やちょっとした相談事から、ソースコードや画像、3Dモデルの作成など、さまざまなシーンで生成AIを活用しています。最近、動画を生成するAIを試してみて、「これほどのものがもう世の中に存在するんだ！」と本当に驚かされました。そこで、ぜひ紹介したいと思い、この記事を書きました。
@@ -181,10 +186,10 @@ https://klingai.com/
 
 いよいよ動画を作成していきます。本当に簡単ですので、ご安心ください👍
 
-1. **ホーム画面で`AI Videos`をクリック**
+1. **ホーム画面で`Video`をクリック**
 ![](/images/turtle-20240916-klingai/proc_01.png =400x)
 
-2. **`AI Videos`画面が開いたら、動画のAIモデルを選択**
+2. **`Video`画面が開いたら、動画のAIモデルを選択**
 KLINGのAIモデルを`KLING1.0` `KLING1.5` `KLING1.6`の中から選択します。
 ・`KLING1.0`モデル：安価なコスト
 ・`KLING1.5`モデル：高画質、ダイナミックな動作、プロンプトへの高い追従性
@@ -202,12 +207,7 @@ KLINGのAIモデルを`KLING1.0` `KLING1.5` `KLING1.6`の中から選択しま�
 
 5. **Settingの項目を設定**
 ![](/images/turtle-20240916-klingai/proc_04.png =400x)
-各設定項目の意味は次の通りです。
-   - **Creativity/Relevanceスライダー**
-     - Creativity：
-     　AIが創造性豊かで自由な発想で動画を生成
-     - Relevance：
-     　AIがプロンプトに忠実な動画を生成
+各設定項目の意味は次の通りです。ドロップダウンリストで選択する形式です。
    - **Mode**
      - Standard Mode：
      　より速い生成速度を優先し、迅速に少ない費用で動画を生成
@@ -215,8 +215,14 @@ KLINGのAIモデルを`KLING1.0` `KLING1.5` `KLING1.6`の中から選択しま�
      　より良いビジュアルで、豊かなディテールと優れた品質の動画を生成
    - **Length**
    　5秒/10秒、選択した長さの動画を生成
-   - **Number of Generations**
+   - **Number of Output**
    　一度に作成する動画の数を設定
+   - **Creativity/Relevanceスライダー**
+     - Creativity：
+     　AIが創造性豊かで自由な発想で動画を生成
+     - Relevance：
+     　AIがプロンプトに忠実な動画を生成
+
 6. **Generateボタンを押して動画を生成**
 ![](/images/turtle-20240916-klingai/proc_05.png =400x)
    - 動画の生成は、数分程度で完了します。
@@ -269,8 +275,7 @@ https://www.youtube.com/watch?v=uH8IIoh3IF4
 - **Creativity/Relevance**
   基本は`0.5`に設定して動画生成AIが自由に生成する余地を残しています。プロンプトにある程度忠実にしたい場合でも`0.6～0.65`に設定しています。なお、`0.75`以上に設定すると動画が破綻する可能性があるため、オススメしていないようです。
 - **Mode**
-  基本は`Professional Mode`にしています。今まで生成した動画で満足度が高いものは、ほとんどが`Professional Mode`で作成された動画です。
-  ※ただし、`KLING1.6`モデルで`Standard Mode`が利用できるようになり、出力品質も高いため、今後は`Standard Mode`も織り交ぜて利用していく予定です。
+    私は、以前は`Professional Mode`を好んで使用していましたが、最近は`Standard Mode`もよく利用しています。`KLING1.6`モデルの`Standard Mode`は、出力品質が高く、十分満足できる内容です。エコに動画生成したいときは、`Standard Mode`を、少しこだわりの動画を生成したいときは`Professional Mode`を、うまく使い分けてみてください。
 - **Length**
   基本は`5秒`にして、いろいろなパターンの動画を作成するようにしています。
   ストーリー性のある動画を作成するときは、`10秒`にしてそこから編集で`5～8秒`を切り出して利用することもあります。
@@ -516,11 +521,18 @@ https://www.youtube.com/watch?v=fYUqur4M_V4
 
 特にプロンプトなどを入力せずとも、画像に面白い動画エフェクトを追加することができる機能です。Effectsタブを選択します。
 
+![](/images/turtle-20240916-klingai/effects_home.png =300x)
+*EffectsへのHome画面からのアクセス*
+
 ![](/images/turtle-20240916-klingai/effects.png =300x)
-*Effectsの選択*
+*Effectsの種類選択*
 
 画像をアップロードしたら、動画にしたいエフェクトの種類を以下から選んでください。
 
+- Bloom Bloom
+  - 対象物に時間経過とともに花を咲かせます。
+- Dizzy Dizzy
+  - 人物や動物などを回転させたり、スピンさせたりします。
 - Fuzzy Fuzzy
   - 柔らかく、ぬいぐるみのようなアニメーションに変化させます。
 - MochiMochi
@@ -576,7 +588,9 @@ https://www.youtube.com/watch?v=fAAnsGnpLh4
 ## 特典映像
 
 最後までブログを読んでいただき、本当にありがとうございます！
-ブログ冒頭でご紹介しました「要塞物語」で登場した"タートルレッドアイ"の謎に迫る続きの動画です。もしお時間がございましたら、ご覧ください。
+
+**● The Secret of Turtle Red Eye**
+ブログ冒頭の動画「要塞物語」で登場した"タートルレッドアイ"の謎に迫ります。AIの正体をその目で確かめてください！
 
 https://www.youtube.com/watch?v=BQ0AT1E7vCM
 
@@ -589,7 +603,8 @@ https://www.youtube.com/watch?v=BQ0AT1E7vCM
 - BGM（音楽AI）: Filmora Generative Music
 - 字幕英訳：Copilot(GPT4)/ChatGPT/Gemini
 
-タートルビレッジという小さな村の観光ガイドビデオを作成しました。一見すると村の紹介動画ですが、予想外の展開を楽しんでいただけると思います。前作(The Secret of Turtle Red Eye)との関連も・・。
+**● Turtle Village -A Tourist's Guide-**
+タートルビレッジという小さな村の観光ガイドビデオを作成しました。一見すると村の紹介動画ですが、予想外の展開があります。前作(The Secret of Turtle Red Eye)との関連も・・。
 
 https://www.youtube.com/watch?v=l3qHAIK-fy4
 
@@ -603,6 +618,7 @@ https://www.youtube.com/watch?v=l3qHAIK-fy4
 - 字幕英訳: GPT4o、Claude3.5 Sonnet、Gemini
   ※英語字幕は、GPT4oとClaudeに日本語を英訳してもらい、それをGeminiに評価してもらうという方法を取っています。最終的にどれを使うかは、私のなけなしの英語能力による判断なのですが、ニュアンスの近そうなものを選択しています。
 
+**● Turtle Circle**
 宇宙を舞台にした戦いで主人公は敗北するが・・・そこに現れた謎の女性。果たしてこの輪から抜け出せるのか？
 
 https://www.youtube.com/watch?v=3xiYsyuHTqI
@@ -616,6 +632,18 @@ https://www.youtube.com/watch?v=3xiYsyuHTqI
 - BGM（音楽AI）: Filmora Generative Music
 - 字幕英訳: Gemini
   ※この動画はまだ作成途中ですが、一旦キリの良いところまで出来たので公開しています。
+
+**● タートル電機**
+勢いで作ったCM風動画！この動画を見たらきっと元気になることが出来ます。そして、気づいたらタートル電機の歌を歌っていると想いますｗ
+
+https://www.youtube.com/watch?v=jFaaWj3wYos
+
+使用したツールは次の通りです。
+
+- 動画生成AI：Kling AI
+- 画像生成AI：Imagen3
+- 編集ソフト：Filmora
+- BGM（音楽AI）: suno
 
 ここまでブログを読んでくださった方は、きっとこのような動画作成できるようになると思いますので、チャレンジしてみてください。
 
@@ -653,8 +681,14 @@ https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
 更新履歴は折りたたみ表示にしています。
 確認したい場合は、以下のバーをクリック（タップ）してください。
 
-:::details 更新履歴（最終更新日：2025/3/16）
+:::details 更新履歴（最終更新日：2025/3/28）
 **更新履歴**
+
+- **2025/3/28**
+  - 説明用の画像、全20枚をすべて新UIに対応。
+  - 説明文の内容、記載順序を新UIにあわせて変更
+  - Effects機能のBloom Bloom、Dizzy Dizzyの説明追加
+  - タートル電機の動画を追加
 
 - **2025/3/16**
   - 画像生成AI一覧の図を最新に更新しました。
