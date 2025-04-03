@@ -35,7 +35,7 @@ Kling AIで動画を生成した後、それらと各種素材をうまく組み
 https://www.youtube.com/watch?v=e9NK0dW7yf0
 
 今回は、このAIツールを用いた動画生成の基本的な方法と、生成した5秒から10秒のAI動画をどのように活用するかについて例を紹介します。
-なお、ブログの最後に「Tales of the Fortress 要塞物語」の続きの動画「The Secret of Turtle Red Eye（タートルレッドアイの謎）」と「Turtle Village -A Tourist's Guide-（タートルビレッジ観光ガイド）」を用意しております。ブログを一通り読んで、ちょっとリラックスしたいときに見ていただければ幸いです。
+なお、ブログの最後に「Tales of the Fortress 要塞物語」の続きの動画「The Secret of Turtle Red Eye（タートルレッドアイの謎）」と「Turtle Village -A Tourist's Guide-（タートルビレッジ観光ガイド）」を用意しております。さらには、新作の「Ready to Fight」も追加しました！ブログを一通り読んで、ちょっとリラックスしたいときに見ていただければ幸いです。
 
 ![](/images/turtle-20240916-klingai/mov_sam.png)
 ![](/images/turtle-20240916-klingai/turtle_circle.jpg =330x)
@@ -618,21 +618,6 @@ https://www.youtube.com/watch?v=l3qHAIK-fy4
 - 字幕英訳: GPT4o、Claude3.5 Sonnet、Gemini
   ※英語字幕は、GPT4oとClaudeに日本語を英訳してもらい、それをGeminiに評価してもらうという方法を取っています。最終的にどれを使うかは、私のなけなしの英語能力による判断なのですが、ニュアンスの近そうなものを選択しています。
 
-**● Turtle Circle**
-宇宙を舞台にした戦いで主人公は敗北するが・・・そこに現れた謎の女性。果たしてこの輪から抜け出せるのか？
-
-https://www.youtube.com/watch?v=3xiYsyuHTqI
-
-使用したツールは次の通りです。
-
-- 動画生成AI：Kling AI
-- 画像生成AI：Imagen3
-- 合成音声AI：VOICEPEAK 商用可能 6ナレーターセット
-- 編集ソフト：Filmora
-- BGM（音楽AI）: Filmora Generative Music
-- 字幕英訳: Gemini
-  ※この動画はまだ作成途中ですが、一旦キリの良いところまで出来たので公開しています。
-
 **● タートル電機**
 勢いで作ったCM風動画！この動画を見たらきっと元気になることが出来ます。そして、気づいたらタートル電機の歌を歌っていると思いますｗ
 
@@ -643,7 +628,23 @@ https://www.youtube.com/watch?v=jFaaWj3wYos
 - 動画生成AI：Kling AI
 - 画像生成AI：Imagen3
 - 編集ソフト：Filmora
-- BGM（音楽AI）: suno
+- BGM（音楽AI）: Suno
+
+**● Ready to Fight**
+宇宙を舞台にした戦いで主人公は敗北するが・・・そこに現れた謎の女性。果たして戦いに勝ち、平和を手にすることはできるのか？
+動画後半のクライマックスシーンは必見です👍️
+
+https://www.youtube.com/watch?v=weqURR9SIGM
+
+使用したツールは次の通りです。
+
+- 動画生成AI：Kling AI
+- 画像生成AI：Imagen3
+- 合成音声AI：VOICEPEAK 商用可能 6ナレーターセット
+- 編集ソフト：Filmora
+- BGM（音楽AI）:  Suno、Filmora Generative Music
+- 字幕英訳: Gemini
+  ※この動画はまだ作成途中ですが、一旦キリの良いところまで出来たので公開しています。
 
 ここまでブログを読んでくださった方は、きっとこのような動画作成できるようになると思いますので、チャレンジしてみてください。
 
@@ -681,8 +682,12 @@ https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
 更新履歴は折りたたみ表示にしています。
 確認したい場合は、以下のバーをクリック（タップ）してください。
 
-:::details 更新履歴（最終更新日：2025/3/28）
+:::details 更新履歴（最終更新日：2025/4/03）
 **更新履歴**
+
+- **2025/4/03**
+  - ブログ構成のマインドマップを修正しました。
+  - Turtle CircleをReady to Fightに差し替えました。
 
 - **2025/3/28**
   - 説明用の画像、全20枚をすべて新UIに対応。
