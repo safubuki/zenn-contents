@@ -580,15 +580,23 @@ Tripo 2.0というAIで3Dモデルを生成する技術に関する記事です�
 
 https://zenn.dev/safubuki/articles/turtle-20240929-tripo2-evo
 
-TripoSRの後継モデル「Stable Fast 3D」が2024年8月2日にリリースされました！TripoSRも十分に素晴らしい技術ですが、Stable Fast 3Dの出力品質の高さには驚かされます。早速、使い方やStable Fast 3DとTripoSRの出力結果の比較などを記事にしましたので、ぜひ読んでその凄さを体感してみてください。
-
-https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
+Googleの動画生成AI「Veo2」は、Geminiなど、私たちが普段利用しているGoogleのプラットフォームから手軽に試せます。基本的な操作はシンプルですが、いくつかのコツを押さえることで、より魅力的な動画を作成できます。この記事では、Geminiの強力なカスタマイズ機能「Gem」を活用した動画生成テクニックなど、実践的な内容を解説しています。
+https://zenn.dev/safubuki/articles/turtle-20250417-veo2
 
 画像1枚から動画を生成するAIツール『Kling AI』の使い方やコツを紹介します。さらに、CM風の動画を作成することで、実際のシーンでの活用例も示しました。うまく融合させれば、モノづくりとプロモーションが画像1枚から可能になります♪
 
 https://zenn.dev/safubuki/articles/turtle-20240916-klingai
 
 ## 更新履歴
+
+更新履歴は折りたたみ表示にしています。
+確認したい場合は、以下のバーをクリック（タップ）してください。
+
+:::details 更新履歴（最終更新日：2025/04/17）
+**更新履歴**
+
+- **2025/4/17**
+  Veo2のブログへのリンクを追加しました。
 
 - **2024/08/04**
   AI関連のStable Fast 3Dの記事を追加し、説明文を追加しました。
@@ -608,3 +616,4 @@ https://zenn.dev/safubuki/articles/turtle-20240916-klingai
 
 - **2024/09/30**
   Tripo 2.0リンク及び、説明文を追加しました。
+:::
