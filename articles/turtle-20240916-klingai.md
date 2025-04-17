@@ -661,6 +661,9 @@ https://www.youtube.com/watch?v=weqURR9SIGM
 
 私が書いたAI関連の記事のリンクを紹介します。興味があればぜひご覧ください。
 
+Googleの動画生成AI「Veo2」は、Geminiなど、私たちが普段利用しているGoogleのプラットフォームから手軽に試せます。基本的な操作はシンプルですが、いくつかのコツを押さえることで、より魅力的な動画を作成できます。この記事では、Geminiの強力なカスタマイズ機能「Gem」を活用した動画生成テクニックなど、実践的な内容を解説しています。Kling AIの記事で紹介した動画生成の考え方も、Veo2を使う上で役立つはずですので、ぜひご覧ください。
+https://zenn.dev/safubuki/articles/turtle-20250417-veo2
+
 Tripo 2.0というAIで3Dモデルを生成する技術に関する記事です。下の記事のTripoSR後継モデルで、精度が劇的に向上しています。モノづくり、動画、VRなど幅広い分野に応用できる可能性があります。現在は未実装ですが、3Dワールドの生成やヒューマノイドモデルを自在に動かして動画を作成する機能もリリース予定とのことで、今後の展開が非常に楽しみです。
 
 https://zenn.dev/safubuki/articles/turtle-20240929-tripo2-evo
@@ -668,10 +671,6 @@ https://zenn.dev/safubuki/articles/turtle-20240929-tripo2-evo
 上記のTripo 2.0の元となったAIで3Dモデルを生成する技術に関する記事です。ローカル環境ではいくらでも生成できるため、全くメリットが無くなったわけではありません。技術の変遷を確認する意味でも、読んでみると良いかもしれません。3Dモデル作成における画像生成のコツや成功・失敗事例なども記載しており、楽しんでいただけると思います。
 
 https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
-
-TripoSRの後継モデル「Stable Fast 3D」に関する記事です。Stable Fast 3Dは、Tripo AI社と提携しているStability AI社がリリースし、3Dモデルの出力品質が向上しました。使い方やStable Fast 3DとTripoSRの出力結果の比較など、興味深い内容が多数含まれています。TripoSR、Stable Fast 3D、そしてTripo 2.0の順でリリースされました。
-
-https://zenn.dev/safubuki/articles/turtle-20240803-stable-fast
 
 GitHub CopilotというAIを利用したコーディングツールの記事です。プログラミングに興味がある方は、こちらの記事も読んでみてください。AIをうまく活用すると、モノづくりの速度が改善します。
 
@@ -682,8 +681,11 @@ https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
 更新履歴は折りたたみ表示にしています。
 確認したい場合は、以下のバーをクリック（タップ）してください。
 
-:::details 更新履歴（最終更新日：2025/4/03）
+:::details 更新履歴（最終更新日：2025/4/17）
 **更新履歴**
+
+- **2025/4/17**
+  - Veo2のブログへのリンクを追加しました。
 
 - **2025/4/03**
   - ブログ構成のマインドマップを修正しました。
