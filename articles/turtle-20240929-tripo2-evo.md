@@ -478,6 +478,9 @@ The pieces are realistic 3DCG and the images are photorealistic.
 
 https://zenn.dev/safubuki/articles/turtle-20240223-gitcopilot
 
+Googleの動画生成AI「Veo2」は、Geminiなど、私たちが普段利用しているGoogleのプラットフォームから手軽に試せます。基本的な操作はシンプルですが、いくつかのコツを押さえることで、より魅力的な動画を作成できます。この記事では、Geminiの強力なカスタマイズ機能「Gem」を活用した動画生成テクニックなど、実践的な内容を解説しています。
+https://zenn.dev/safubuki/articles/turtle-20250417-veo2
+
 画像1枚から動画を生成するAIツール『Kling AI』の使い方やコツを紹介します。さらに、CM風の動画を作成することで、実際のシーンでの活用例も示しました。うまく融合させれば、モノづくりとプロモーションが画像1枚から可能になりそうです。
 
 https://zenn.dev/safubuki/articles/turtle-20240916-klingai
@@ -491,8 +494,11 @@ https://zenn.dev/safubuki/articles/turtle-20240721-tripo-3dp
 更新履歴は折りたたみ表示にしています。
 確認したい場合は、以下のバーをクリック（タップ）してください。
 
-:::details 更新履歴（最終更新日：2024/11/02）
+:::details 更新履歴（最終更新日：2025/04/17）
 **更新履歴**
+
+- **2025/04/17**
+  - Veo2のブログへのリンクを追加しました。
 
 - **2024/09/30**
   TripoSRリンク及び、説明文をリンク欄にも追加しました。
