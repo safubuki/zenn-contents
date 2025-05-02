@@ -3,7 +3,7 @@ title: "実例付き！Gemini『Gem』徹底活用ガイド ～あなただけ�
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Gemini, Gem, 生成AI, Google]
-published: false
+published: true
 ---
 Googleの生成AI「Gemini」に搭載されているカスタム機能「Gem」をご存知でしょうか？
 
