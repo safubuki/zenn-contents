@@ -3,7 +3,7 @@ title: "Geminiで『Gemを作るGem』の作り方！Gemを量産してAIをさ�
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Gemini, Gem, 生成AI, Google, 効率化]
-published: false
+published: true
 ---
 
 Geminiの強力なカスタマイズ機能である『Gem』。一度使うと手放せない便利な機能です。
