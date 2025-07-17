@@ -1,0 +1,25 @@
+# Robot Agent System - Phase 1 Requirements
+# Core dependencies for basic FastAPI functionality
+
+# Phase 1 - Essential Dependencies
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+pydantic>=2.0.0
+
+# Phase 2 - AI and RAG Dependencies (to be installed in Phase 2)
+# Uncomment these for Phase 2 implementation:
+# langchain>=0.1.0
+# langchain-community>=0.0.10
+# langchain-google-genai>=0.0.6
+# chromadb>=0.4.0
+# google-generativeai>=0.3.0
+# pydantic-settings>=2.0.0
+# python-dotenv>=1.0.0
+# python-multipart>=0.0.6
+# httpx>=0.25.0
+
+# Development Dependencies (Optional)
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+# black>=23.0.0
+# flake8>=6.0.0

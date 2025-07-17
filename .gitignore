@@ -1,2 +1,14 @@
 node_modules
 .DS_Store
+
+# Backend Python files
+backend/venv/
+backend/.env
+backend/chroma_db/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
