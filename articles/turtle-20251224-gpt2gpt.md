@@ -1,5 +1,5 @@
 ---
-title: "ChatGPTで『GPTを作るGPT』の作り方！MyGPTを量産してAIをさらに活用"
+title: "ChatGPTで『GPTを作るGPT』の作り方！GPTを量産してAIをさらに活用"
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [OpenAI, GPT, ChatGPT, 生成AI, 効率化]
@@ -10,7 +10,7 @@ published: true
 
 https://zenn.dev/safubuki/articles/turtle-20250507-gem2gem
 
-「Gemを作るGem」があれば、誰でも簡単に高機能なAIアシスタントを量産できる……このアイデアは非常に便利ですが、「**これ、応用すればOpenAIのGPTにも展開できるのでは？**」と考えました。
+「Gemを作るGem」があれば、誰でも簡単に高機能なAIアシスタントを量産できる……このアイデアは非常に便利ですが、「**これ、応用すればChatGPTのGPTにも展開できるのでは？**」と考えました。
 ChatGPTの『GPTs（My GPTs）』も、GeminiのGemと同じく非常に強力なカスタマイズ機能ですが、作成には少しコツがいります。
 
 GPTsは専門知識がなくても作れるのが魅力ですが、いざ作ろうとすると設定項目が多く、何を書けばいいか迷ってしまう……そんな経験はありませんか？
