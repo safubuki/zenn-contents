@@ -1,9 +1,9 @@
 ---
 title: "OpenAIで『GPTを作るGPT』の作り方！MyGPTを量産してAIをさらに活用"
-emoji: "�"
+emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [OpenAI, GPT, ChatGPT, 生成AI, 効率化]
-published: false
+published: true
 ---
 
 以前、私は以下の記事で、Geminiのカスタム機能「Gem」を作るためのGem、「Gemジェネレーター」について書きました。
