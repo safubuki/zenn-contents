@@ -1,5 +1,5 @@
 ---
-title: "OpenAIで『GPTを作るGPT』の作り方！MyGPTを量産してAIをさらに活用"
+title: "ChatGPTで『GPTを作るGPT』の作り方！MyGPTを量産してAIをさらに活用"
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [OpenAI, GPT, ChatGPT, 生成AI, 効率化]
