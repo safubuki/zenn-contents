@@ -444,7 +444,7 @@ GPT-5.2 Thinking（画風の一貫性ルールと安全ガードレールを守�
 
 この画像を実際にスライドに配置してみると、ここまで素敵な仕上がりになります。手書きの温かみが、スライド全体の雰囲気を柔らかくしてくれています。
 
-![alt text](/images/turtle-20251224-gpt2gpt/handdrawn-biz-illust-slide-example-v2.png)
+![alt text](/images/turtle-20251224-gpt2gpt/handdrawn-biz-illust-slide-example.png)
 *スライドへの適用例*
 
 
