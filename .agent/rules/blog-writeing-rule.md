@@ -18,6 +18,7 @@
 
 - **Zenn Article Generator** (`zenn-article-generator`): 既存記事をもとにした「その人らしい」文体・構成の適用、フロントマターの付与。
 - **Zenn Content Researcher** (`zenn-content-researcher`): ウェブ検索を用いた最新情報の収集と執筆内容のファクトチェック。
+- **Zenn Article Updater** (`zenn-article-updater`): 既存記事の最新情報への更新、差分ハイライト、新画像挿入箇所の指示。
 - **Zenn Text Reviewer** (`zenn-text-reviewer`): 「〜ましょう」の禁止、UI項目の日本語優先など、文章制約の校正。
 - **Zenn Asset Manager** (`zenn-asset-manager`): 記事と同名の画像フォルダ（`images/記事名/`）の厳密な管理ルールの適用。
 - **Zenn Markdown Syntax** (`zenn-markdown-syntax`): Zenn特有のメッセージや埋め込み記法のリファレンス提供。
