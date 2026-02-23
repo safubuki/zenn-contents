@@ -3,7 +3,7 @@ title: "Agent Skillsで『スキルを作るスキル』の作り方！Agent Ski
 emoji: "🐢"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [agentskills, AI, githubcopilot, codex, antigravity]
-published: false
+published: true
 ---
 以前、私のブログで、Geminiのカスタム機能である「Gemを作るGem」や、ChatGPTの「GPTを作るGPT」について解説しました。
 
