@@ -140,6 +140,8 @@ cd .github/skills
 git clone https://github.com/safubuki/skills-generator.git
 ```
 
+@[card](https://github.com/safubuki/skills-generator)
+
 ※クローンではなく、GitHubのページからZIP形式でダウンロードし、解凍して `.github/skills/skills-generator` として配置していただいても構いません。
 
 これだけで導入は完了です！
@@ -565,13 +567,17 @@ AIエージェントは、ただ与えられた一般的なコードを書くだ
 
 ## 関連リンク
 
+本記事で紹介した「**Skills Generator**」のGitHubリポジトリです。お手元の開発環境（GitHub Copilot等）の指定ディレクトリに配置するだけで、すぐにAgent Skillsの作成・改善・監査機能を使い始めることができます。
+
+@[card](https://github.com/safubuki/skills-generator)
+
 GeminiでGemを量産する仕組み「Gemを作るGem」について解説した記事です。AIにAIを作ってもらう「メタ生成」の基礎的な考え方を知りたい方はこちらもご覧ください。
 
-https://zenn.dev/safubuki/articles/turtle-20250507-gem2gem
+@[card](https://zenn.dev/safubuki/articles/turtle-20250507-gem2gem)
 
 ChatGPTでカスタムGPTを効率よく量産するための『GPTジェネレーターGPT』について解説した記事です。設定が難しいGPTの各項目（指示や会話のきっかけなど）を、自然な言葉で伝えるだけで自動生成し、思い通りのAIアシスタントを簡単に作る仕組みをご紹介しています。
 
-https://zenn.dev/safubuki/articles/turtle-20251224-gpt2gpt
+@[card](https://zenn.dev/safubuki/articles/turtle-20251224-gpt2gpt)
 
 ## 更新履歴
 
