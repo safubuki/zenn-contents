@@ -3,7 +3,7 @@ title: "Agent Skillsで『スクリプト活用スキル』の作り方！定型
 emoji: "🐢"
 type: "tech"
 topics: [agentskills, AI, githubcopilot, codex, claude]
-published: false
+published: true
 ---
 
 以前、Agent Skillsで「スキルを作るスキル」を作る記事を書きました。
